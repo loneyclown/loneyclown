@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于MAC系统上向日葵等“流氓”软件的开启自启dis]]></title>
+    <url>%2F2019%2F11%2F27%2F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F2019-11-27-notes%2F</url>
+    <content type="text"><![CDATA[题记因为近期teamviewer遭到入侵，所以对于远控软件不得不重新选择。然后就入了向日葵的坑了…然后我就各种baidu、google，最后总算是战胜了“流氓”。 在正文开始之前，首先来了解下MAC管理开机自启的几种方式 MAC管理开机自启的多种方式系统偏好设置里的开机自启（登录项/LoginItem）这种方式最简单直观 通过plist文件管理开机自启MAC分别有6个目录存放了开启自启的plist文件 Library/Preferences/ – （当前用户设置的进程）~/Library/LaunchAgents/ – （当前用户的守护进程）/Library/LaunchAgents/ – （管理员设置的用户进程）/Library/LaunchDaemons/ – （管理员提供的系统守护进程）/System/Library/LaunchAgents/ – （系统提供的用户进程）/System/Library/LaunchDaemons/ – （系统提供的系统守护进程） 这里以向日葵为例，安装了向日葵客户端和控制端后，分别在/Library/LaunchAgents/、/Library/LaunchDaemons/目录生成了4个plist文件：打开终端，输入： open /Library/LaunchAgents 使用任意文本编辑器编辑com.oray.sunlogin.agent.plist、com.oray.sunlogin.startup.plist两个文件，将Disabled改为true，将RunAtLoad改为false：打开终端，输入： open /Library/LaunchDaemons 编辑com.oray.sunlogin.helper.plist、com.oray.sunlogin.plist文件，将Disabled改为true，将RunAtLoad改为false： 这样，下次开机，向日葵便不会自启了。]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[SVN命令行相关操作]]></title>
     <url>%2F2019%2F10%2F12%2F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F2019-10-12-notes%2F</url>
     <content type="text"><![CDATA[基础操作将数据导入存储库1$ svn import https://svn.example.com/repos/MyRepo/MyProject/trunk -m "Initial project import" 签出工作副本1$ svn checkout https://svn.example.com/repos/MyRepo/MyProject/trunk MyWorkingCopy 更新工作副本1$ svn update 在本地工作副本中进行更改1$ svn commit -m "My Descriptive Log Message" 执行文件和目录操作添加新文件和目录1$ svn add foo.cs 复制文件和目录1$ svn copy foo.cs bar.cs 删除文件和目录1$ svn delete foo.cs 恢复或放弃本地更改1$ svn revert foo.cs 分支和标记您应该使用svn copy命令创建分支和标签。当您希望项目与历史记录相关时，这是用于复制项目和存储库中项目的命令。svn copy命令用于分支，因为从技术上讲branch是复制源的副本。但是，它不是在本地文件系统上复制文件时所熟悉的普通副本。Subversion存储库中的分支称为“便宜副本”，类似于符号链接。因此，创建新分支将花费最少的时间来完成，并且在Subversion存储库中几乎不占用空间。您可以创建分支并将其用于所需的任何更改，而不考虑更改的大小和范围。 使用直接URL到URL复制创建分支1$ svn copy https://example.com/MyRepo/trunk https://example.com/MyRepo/branches/MyNewBranch -m "Creating a new branch" 参阅官方文档：http://subversion.apache.org/quick-start]]></content>

@@ -256,6 +256,117 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/27/学习笔记/2019-11-27-notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Loneyclown">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://i.postimg.cc/B64j4hb6/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Loneyclown">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/11/27/学习笔记/2019-11-27-notes/" class="post-title-link" itemprop="url">关于MAC系统上向日葵等“流氓”软件的开启自启dis</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-27 00:00:00 / 修改时间：11:29:57" itemprop="dateCreated datePublished" datetime="2019-11-27T00:00:00+08:00">2019-11-27</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          <br>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h5 id="题记"><a href="#题记" class="headerlink" title="题记"></a>题记</h5><p>因为近期teamviewer遭到入侵，所以对于远控软件不得不重新选择。然后就入了向日葵的坑了…然后我就各种baidu、google，最后总算是战胜了“流氓”。  </p>
+<p>在正文开始之前，首先来了解下MAC管理开机自启的几种方式</p>
+<h2 id="MAC管理开机自启的多种方式"><a href="#MAC管理开机自启的多种方式" class="headerlink" title="MAC管理开机自启的多种方式"></a>MAC管理开机自启的多种方式</h2><h4 id="系统偏好设置里的开机自启（登录项-LoginItem）"><a href="#系统偏好设置里的开机自启（登录项-LoginItem）" class="headerlink" title="系统偏好设置里的开机自启（登录项/LoginItem）"></a>系统偏好设置里的开机自启（登录项/LoginItem）</h4><p>这种方式最简单直观<br><img src="https://i.postimg.cc/Qx38BZKR/2019-11-27-img-01.jpg" alt><br><img src="https://i.postimg.cc/BQBqH7xt/2019-11-27-img-02.jpg" alt></p>
+<h4 id="通过plist文件管理开机自启"><a href="#通过plist文件管理开机自启" class="headerlink" title="通过plist文件管理开机自启"></a>通过plist文件管理开机自启</h4><p>MAC分别有6个目录存放了开启自启的plist文件</p>
+<blockquote>
+<p>Library/Preferences/ – （当前用户设置的进程）<br>~/Library/LaunchAgents/ – （当前用户的守护进程）<br>/Library/LaunchAgents/ – （管理员设置的用户进程）<br>/Library/LaunchDaemons/ – （管理员提供的系统守护进程）<br>/System/Library/LaunchAgents/ – （系统提供的用户进程）<br>/System/Library/LaunchDaemons/ – （系统提供的系统守护进程）</p>
+</blockquote>
+<p>这里以向日葵为例，安装了向日葵客户端和控制端后，分别在<code>/Library/LaunchAgents/</code>、<code>/Library/LaunchDaemons/</code>目录生成了4个plist文件：<br>打开终端，输入：</p>
+<pre><code class="shell">open /Library/LaunchAgents</code></pre>
+<p><img src="https://i.postimg.cc/bNN5Vm7Z/2019-11-27-img-03.jpg" alt><br>使用任意文本编辑器编辑<code>com.oray.sunlogin.agent.plist</code>、<code>com.oray.sunlogin.startup.plist</code>两个文件，将Disabled改为true，将RunAtLoad改为false：<br><img src="https://i.postimg.cc/XYtDJ4p5/2019-11-27-img-04.jpg" alt><br><img src="https://i.postimg.cc/43t2Hq9S/2019-11-27-img-05.jpg" alt><br>打开终端，输入：</p>
+<pre><code class="shell">open /Library/LaunchDaemons</code></pre>
+<p><img src="https://i.postimg.cc/mZVX9QPB/2019-11-27-img-06.jpg" alt><br>编辑<code>com.oray.sunlogin.helper.plist</code>、<code>com.oray.sunlogin.plist</code>文件，将Disabled改为true，将RunAtLoad改为false：<br><img src="https://i.postimg.cc/FsBTWNb6/2019-11-27-img-07.jpg" alt><br><img src="https://i.postimg.cc/653HfyZR/2019-11-27-img-08.jpg" alt></p>
+<p>这样，下次开机，向日葵便不会自启了。</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/12/学习笔记/2019-10-12-notes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1711,118 +1822,6 @@ _中文版本：[陈乐一 火影主题曲《青鸟》](https://www.bilibili.com
   </article>
 
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/28/学习笔记/2018-11-28-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://i.postimg.cc/B64j4hb6/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/28/学习笔记/2018-11-28-notes/" class="post-title-link" itemprop="url">日常学习笔记</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-28 00:00:00" itemprop="dateCreated datePublished" datetime="2018-11-28T00:00:00+08:00">2018-11-28</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-12 09:43:11" itemprop="dateModified" datetime="2019-10-12T09:43:11+08:00">2019-10-12</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="2018-11-28"><a href="#2018-11-28" class="headerlink" title="2018-11-28"></a>2018-11-28</h1><h3 id="纯CSS3动画效果实现类技能CD加载效果"><a href="#纯CSS3动画效果实现类技能CD加载效果" class="headerlink" title="纯CSS3动画效果实现类技能CD加载效果"></a>纯CSS3动画效果实现类技能CD加载效果</h3><h4 id="html"><a href="#html" class="headerlink" title="html"></a>html</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"iib-mark"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"l1 vam"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"r1 vam"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"l2"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="css"><a href="#css" class="headerlink" title="css"></a>css</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.iib-mark</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100</span>rpx;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100</span>rpx;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.iib-mark</span>&gt;<span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.iib-mark</span>&gt;<span class="selector-class">.l1</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">3</span>;</span><br><span class="line">  <span class="attribute">transform-origin</span>: right center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.iib-mark</span>&gt;<span class="selector-class">.l1</span><span class="selector-class">.vam</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#c8c8c8</span>;</span><br><span class="line">  <span class="attribute">animation</span>: v1 <span class="number">1.5s</span> linear;</span><br><span class="line">  <span class="attribute">animation-fill-mode</span>: forwards;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.iib-mark</span>&gt;<span class="selector-class">.r1</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">transform-origin</span>: left center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.iib-mark</span>&gt;<span class="selector-class">.r1</span><span class="selector-class">.vam</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#c8c8c8</span>;</span><br><span class="line">  <span class="attribute">animation</span>: v2 <span class="number">1.5s</span> linear <span class="number">1.5s</span>;</span><br><span class="line">  <span class="attribute">animation-fill-mode</span>: forwards;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.iib-mark</span>&gt;<span class="selector-class">.l2</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">2</span>;</span><br><span class="line">  <span class="attribute">background</span>: white;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">keyframes</span> v1 &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(0);</span><br><span class="line">  &#125;</span><br><span class="line">  99<span class="selector-class">.9</span>% &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">3</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  100% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-180deg);</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">keyframes</span> v2 &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(0);</span><br><span class="line">  &#125;</span><br><span class="line">  99<span class="selector-class">.9</span>% &#123;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  100% &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-180deg);</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
@@ -1863,7 +1862,7 @@ _中文版本：[陈乐一 火影主题曲《青鸟》](https://www.bilibili.com
         
           <a href="/archives">
         
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1969,7 +1968,9 @@ _中文版本：[陈乐一 火影主题曲《青鸟》](https://www.bilibili.com
         
           
         
-        <span class="site-state-item-count">34</span>
+          
+        
+        <span class="site-state-item-count">35</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
