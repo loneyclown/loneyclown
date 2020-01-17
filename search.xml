@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MAC系统Nginx安装与操作]]></title>
+    <url>%2F2020%2F01%2F17%2FstudyNotes%2F2020-01-17-notes%2F</url>
+    <content type="text"><![CDATA[安装安装Command Line tools1xcode-select --install 安装brew命令1ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 安装nginx1brew install nginx 操作启动1sudo nginx 若提示命令不存在，则找到nginx可执行文件，比如：/usr/local/bin/nginx寻找nginx可执行文件可使用命令find / -iname &quot;nginx&quot;，一般bin目录下的nginx就是可执行文件找到后，进入目录，执行： 1./nginx 重启1sudo nginx -s reload 提示找不到命令解决方法同启动 停止查询Nginx主线程1ps -el|grep nginx 正常停止1sudo kill -QUIT 进程号 快速停止1sudo kill -TERM 进程号 配置配置文件目录一般情况下，通过brew命令安装的nginx，配置文件目录在/usr/local/etc/nginx/若找不到上述目录，可以直接全局查找配置文件所在目录：find / -iname &quot;nginx.conf&quot;相关配置自行百度 查看配置文件是否正确12sudo nginx -t` 出现如下结果说明配置文件正确：]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>macOS</tag>
+        <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于MAC系统上向日葵等“流氓”软件的开机自启dis]]></title>
     <url>%2F2019%2F11%2F27%2FstudyNotes%2F2019-11-27-notes%2F</url>
     <content type="text"><![CDATA[题记因为近期teamviewer遭到入侵，所以对于远控软件不得不重新选择。然后就入了向日葵的坑了…然后我就各种baidu、google，最后总算是战胜了“流氓”。 MAC管理开机自启的两种方式系统偏好设置里的开机自启（登录项/LoginItem）这种方式最简单直观 通过plist文件管理开机自启MAC分别有6个目录存放了开启自启的plist文件 Library/Preferences/ – （当前用户设置的进程）~/Library/LaunchAgents/ – （当前用户的守护进程）/Library/LaunchAgents/ – （管理员设置的用户进程）/Library/LaunchDaemons/ – （管理员提供的系统守护进程）/System/Library/LaunchAgents/ – （系统提供的用户进程）/System/Library/LaunchDaemons/ – （系统提供的系统守护进程） 这里以向日葵为例，安装了向日葵客户端和控制端后，分别在/Library/LaunchAgents/、/Library/LaunchDaemons/目录生成了4个plist文件：打开终端，输入： open /Library/LaunchAgents 使用任意文本编辑器编辑com.oray.sunlogin.agent.plist、com.oray.sunlogin.startup.plist两个文件，将Disabled改为true，将RunAtLoad改为false：打开终端，输入： open /Library/LaunchDaemons 编辑com.oray.sunlogin.helper.plist、com.oray.sunlogin.plist文件，将Disabled改为true，将RunAtLoad改为false： 这样，下次开机，向日葵便不会自启了。]]></content>
