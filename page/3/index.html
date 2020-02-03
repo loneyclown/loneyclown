@@ -607,6 +607,137 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/08/Node/2018-06-26-Node-notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Loneyclown">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Loneyclown">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/06/08/Node/2018-06-26-Node-notes/" class="post-title-link" itemprop="url">Node 学习笔记</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-06-08 00:00:00" itemprop="dateCreated datePublished" datetime="2018-06-08T00:00:00+08:00">2018-06-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-10-12 09:43:11" itemprop="dateModified" datetime="2019-10-12T09:43:11+08:00">2019-10-12</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          <br>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="Node-学习笔记"><a href="#Node-学习笔记" class="headerlink" title="Node 学习笔记"></a>Node 学习笔记</h1><h2 id="窝·兹基·谢德"><a href="#窝·兹基·谢德" class="headerlink" title="窝·兹基·谢德"></a>窝·兹基·谢德</h2><h3 id="创建一个server服务"><a href="#创建一个server服务" class="headerlink" title="创建一个server服务"></a>创建一个server服务</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入http模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个http服务</span></span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;).listen(<span class="number">8088</span>, <span class="string">"127.0.0.1"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"服务启动成功，请访问：127.0.0.1"</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Node-中间件"><a href="#Node-中间件" class="headerlink" title="Node 中间件"></a>Node 中间件</h2><p>favicon的处理<br>安装依赖</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install serve-favicon --save</span><br></pre></td></tr></table></figure>
+
+<p>添加代码到server.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> favicon = <span class="built_in">require</span>(<span class="string">'serve-favicon'</span>);</span><br><span class="line">app.use(favicon(__dirname + <span class="string">'/favicon.ico'</span>));</span><br></pre></td></tr></table></figure>
+
+<h3 id="自己编写中间件"><a href="#自己编写中间件" class="headerlink" title="自己编写中间件"></a>自己编写中间件</h3><p>中间件大致结构</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.use(xxx()); <span class="comment">// xxx()可以是个匿名函数也可以是第三方中间件那样:</span></span><br><span class="line">app.use(bodyParser());</span><br></pre></td></tr></table></figure>
+
+<p>一个打印请求时间的中间件（匿名结构）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Time:'</span>, <span class="built_in">Date</span>.now());</span><br><span class="line">  next();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="挂载中间件"><a href="#挂载中间件" class="headerlink" title="挂载中间件"></a>挂载中间件</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 挂载至 /user/:id 的中间件，任何指向 /user/:id 的请求都会执行它</span></span><br><span class="line">app.use(<span class="string">'/user/:id'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Request Type:'</span>, req.method);</span><br><span class="line">  next();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>也就是说只有请求开头user/:id 才会被这个中间件处理，如果不是则会被忽略。<br>此外上述的req.method是指请求的方式例如：get,post,put,delete</p>
+<h3 id="第一个Node-js程序"><a href="#第一个Node-js程序" class="headerlink" title="第一个Node.js程序"></a>第一个Node.js程序</h3><p>server.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//依赖一个http模块，相当于java的import，与C#中的using</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个服务器对象</span></span><br><span class="line">server = http.createSever(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line"><span class="comment">//设置请求成功时响应头部的MIME为纯文本</span></span><br><span class="line">res.writeHeader(<span class="number">200</span>, &#123; <span class="string">"Content-Type"</span>: <span class="string">"text/plain"</span> &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//向客户端输出字符</span></span><br><span class="line">res.end(<span class="string">"Hello World\n"</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//让服务器在8088端口开始运行</span></span><br><span class="line">server.listen(<span class="number">8088</span>, <span class="string">"127.0.0.1);</span></span><br><span class="line"><span class="string">console.log("</span>Server is running at <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8088</span><span class="string">");</span></span><br></pre></td></tr></table></figure>
+
+<p>引入 required 模块：我们可以使用 require 指令来载入 Node.js 模块。<br>创建服务器：服务器可以监听客户端的请求，类似于TomCat、IIS、Apache 、Nginx 等 HTTP 服务器。<br>接收请求与响应请求 服务器很容易创建，客户端可以使用浏览器或终端发送 HTTP 请求，服务器接收请求后返回响应数据。</p>
+<p>第一行请求（require）Node.js 自带的 http 模块，并且把它赋值给 http 变量。<br>接下来我们调用 http 模块提供的函数： createServer 。这个函数会返回 一个对象，这个对象有一个叫做 listen 的方法，这个方法有一个数值参数， 指定这个 HTTP 服务器监听的端口号。</p>
+<h3 id="一个简单的Express项目"><a href="#一个简单的Express项目" class="headerlink" title="一个简单的Express项目"></a>一个简单的Express项目</h3><p>index.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入express模块</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个app对象，类似一个web应用（网站）</span></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">//接受指定路径的请求，指定回调函数</span></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'Hello World!'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个web服务器，可以认为就是web服务器对象</span></span><br><span class="line"><span class="comment">//监听9988端口，当监听成功时回调</span></span><br><span class="line"><span class="keyword">var</span> server = app.listen(<span class="number">9988</span>, <span class="string">'localhost'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> host = server.address().address;<span class="comment">//地址</span></span><br><span class="line">  <span class="keyword">var</span> port = server.address().port;<span class="comment">//端口</span></span><br><span class="line">  </span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'应用实例，访问地址为 http://%s:%s'</span>, host, port);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/08/Git/2018-06-26-Git-Bash/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -713,137 +844,6 @@
 <li>如何从远程库克隆？<br>上面我们了解了先有本地库，后有远程库时候，如何关联远程库。<br>现在我们想，假如远程库有新的内容了，我想克隆到本地来 如何克隆呢？<br>首先，登录github，创建一个新的仓库，名字叫testgit2.如下：  <img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323066741.PNG" alt="avatar"><br>如下，我们看到：<br><img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323087143.PNG" alt="avatar"><br>现在，远程库已经准备好了，下一步是使用命令git clone克隆一个本地库了。如下所示：<br><img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323653601.PNG" alt="avatar"><br>接着在我本地目录下 生成testgit2目录了，如下所示：<br><img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323810970.PNG" alt="avatar"></li>
 </ol>
 
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/08/Node/2018-06-26-Node-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/06/08/Node/2018-06-26-Node-notes/" class="post-title-link" itemprop="url">Node 学习笔记</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-06-08 00:00:00" itemprop="dateCreated datePublished" datetime="2018-06-08T00:00:00+08:00">2018-06-08</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-12 09:43:11" itemprop="dateModified" datetime="2019-10-12T09:43:11+08:00">2019-10-12</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="Node-学习笔记"><a href="#Node-学习笔记" class="headerlink" title="Node 学习笔记"></a>Node 学习笔记</h1><h2 id="窝·兹基·谢德"><a href="#窝·兹基·谢德" class="headerlink" title="窝·兹基·谢德"></a>窝·兹基·谢德</h2><h3 id="创建一个server服务"><a href="#创建一个server服务" class="headerlink" title="创建一个server服务"></a>创建一个server服务</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入http模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个http服务</span></span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;).listen(<span class="number">8088</span>, <span class="string">"127.0.0.1"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"服务启动成功，请访问：127.0.0.1"</span>);</span><br></pre></td></tr></table></figure>
-
-<h2 id="Node-中间件"><a href="#Node-中间件" class="headerlink" title="Node 中间件"></a>Node 中间件</h2><p>favicon的处理<br>安装依赖</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install serve-favicon --save</span><br></pre></td></tr></table></figure>
-
-<p>添加代码到server.js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> favicon = <span class="built_in">require</span>(<span class="string">'serve-favicon'</span>);</span><br><span class="line">app.use(favicon(__dirname + <span class="string">'/favicon.ico'</span>));</span><br></pre></td></tr></table></figure>
-
-<h3 id="自己编写中间件"><a href="#自己编写中间件" class="headerlink" title="自己编写中间件"></a>自己编写中间件</h3><p>中间件大致结构</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.use(xxx()); <span class="comment">// xxx()可以是个匿名函数也可以是第三方中间件那样:</span></span><br><span class="line">app.use(bodyParser());</span><br></pre></td></tr></table></figure>
-
-<p>一个打印请求时间的中间件（匿名结构）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Time:'</span>, <span class="built_in">Date</span>.now());</span><br><span class="line">  next();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="挂载中间件"><a href="#挂载中间件" class="headerlink" title="挂载中间件"></a>挂载中间件</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 挂载至 /user/:id 的中间件，任何指向 /user/:id 的请求都会执行它</span></span><br><span class="line">app.use(<span class="string">'/user/:id'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Request Type:'</span>, req.method);</span><br><span class="line">  next();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>也就是说只有请求开头user/:id 才会被这个中间件处理，如果不是则会被忽略。<br>此外上述的req.method是指请求的方式例如：get,post,put,delete</p>
-<h3 id="第一个Node-js程序"><a href="#第一个Node-js程序" class="headerlink" title="第一个Node.js程序"></a>第一个Node.js程序</h3><p>server.js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//依赖一个http模块，相当于java的import，与C#中的using</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个服务器对象</span></span><br><span class="line">server = http.createSever(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line"><span class="comment">//设置请求成功时响应头部的MIME为纯文本</span></span><br><span class="line">res.writeHeader(<span class="number">200</span>, &#123; <span class="string">"Content-Type"</span>: <span class="string">"text/plain"</span> &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//向客户端输出字符</span></span><br><span class="line">res.end(<span class="string">"Hello World\n"</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//让服务器在8088端口开始运行</span></span><br><span class="line">server.listen(<span class="number">8088</span>, <span class="string">"127.0.0.1);</span></span><br><span class="line"><span class="string">console.log("</span>Server is running at <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8088</span><span class="string">");</span></span><br></pre></td></tr></table></figure>
-
-<p>引入 required 模块：我们可以使用 require 指令来载入 Node.js 模块。<br>创建服务器：服务器可以监听客户端的请求，类似于TomCat、IIS、Apache 、Nginx 等 HTTP 服务器。<br>接收请求与响应请求 服务器很容易创建，客户端可以使用浏览器或终端发送 HTTP 请求，服务器接收请求后返回响应数据。</p>
-<p>第一行请求（require）Node.js 自带的 http 模块，并且把它赋值给 http 变量。<br>接下来我们调用 http 模块提供的函数： createServer 。这个函数会返回 一个对象，这个对象有一个叫做 listen 的方法，这个方法有一个数值参数， 指定这个 HTTP 服务器监听的端口号。</p>
-<h3 id="一个简单的Express项目"><a href="#一个简单的Express项目" class="headerlink" title="一个简单的Express项目"></a>一个简单的Express项目</h3><p>index.js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入express模块</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个app对象，类似一个web应用（网站）</span></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">//接受指定路径的请求，指定回调函数</span></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'Hello World!'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个web服务器，可以认为就是web服务器对象</span></span><br><span class="line"><span class="comment">//监听9988端口，当监听成功时回调</span></span><br><span class="line"><span class="keyword">var</span> server = app.listen(<span class="number">9988</span>, <span class="string">'localhost'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> host = server.address().address;<span class="comment">//地址</span></span><br><span class="line">  <span class="keyword">var</span> port = server.address().port;<span class="comment">//端口</span></span><br><span class="line">  </span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'应用实例，访问地址为 http://%s:%s'</span>, host, port);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
           
         
       
