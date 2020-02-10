@@ -77,9 +77,9 @@
     <link href="https://loneyclown.github.io/2020/01/17/randomNotes/2020-01-17-MAC%E7%B3%BB%E7%BB%9FNginx%E5%AE%89%E8%A3%85%E4%B8%8E%E6%93%8D%E4%BD%9C/"/>
     <id>https://loneyclown.github.io/2020/01/17/randomNotes/2020-01-17-MAC%E7%B3%BB%E7%BB%9FNginx%E5%AE%89%E8%A3%85%E4%B8%8E%E6%93%8D%E4%BD%9C/</id>
     <published>2020-01-16T16:00:00.000Z</published>
-    <updated>2020-02-10T09:22:31.671Z</updated>
+    <updated>2020-02-10T11:57:55.758Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="安装Command-Line-tools"><a href="#安装Command-Line-tools" class="headerlink" title="安装Command Line tools"></a>安装Command Line tools</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure><h4 id="安装brew命令"><a href="#安装brew命令" class="headerlink" title="安装brew命令"></a>安装brew命令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></table></figure><h4 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nginx</span><br></pre></td></tr></table></figure><h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx</span><br></pre></td></tr></table></figure><p>若提示命令不存在，则找到nginx可执行文件，比如：<code>/usr/local/bin/nginx</code><br>寻找nginx可执行文件可使用命令<code>find / -iname &quot;nginx&quot;</code>，一般bin目录下的nginx就是可执行文件<br>找到后，进入目录，执行：  </p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./nginx</span><br></pre></td></tr></table></figure><h4 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -s reload</span><br></pre></td></tr></table></figure><p>提示找不到命令解决方法同启动</p><h4 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h4><h5 id="查询Nginx主线程"><a href="#查询Nginx主线程" class="headerlink" title="查询Nginx主线程"></a>查询Nginx主线程</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -el|grep nginx</span><br></pre></td></tr></table></figure><p><img src="https://i.postimg.cc/RhZ9DmPY/2020-01-17-img-01.png" alt="01"></p><h5 id="正常停止"><a href="#正常停止" class="headerlink" title="正常停止"></a>正常停止</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo kill -QUIT 进程号</span><br></pre></td></tr></table></figure><h5 id="快速停止"><a href="#快速停止" class="headerlink" title="快速停止"></a>快速停止</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo kill -TERM 进程号</span><br></pre></td></tr></table></figure><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="配置文件目录"><a href="#配置文件目录" class="headerlink" title="配置文件目录"></a>配置文件目录</h4><p>一般情况下，通过brew命令安装的nginx，配置文件目录在<code>/usr/local/etc/nginx/</code><br>若找不到上述目录，可以直接全局查找配置文件所在目录：<code>find / -iname &quot;nginx.conf&quot;</code><br>相关配置自行百度</p><h4 id="查看配置文件是否正确"><a href="#查看配置文件是否正确" class="headerlink" title="查看配置文件是否正确"></a>查看配置文件是否正确</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -t</span><br><span class="line">`</span><br></pre></td></tr></table></figure><p>出现如下结果说明配置文件正确：<br><img src="https://i.postimg.cc/9Fv5GyjK/2020-01-17-img-02.jpg" alt="02"></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="安装Command-Line-tools"><a href="#安装Command-Line-tools" class="headerlink" title="安装Command Line tools"></a>安装Command Line tools</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure><h4 id="安装brew命令"><a href="#安装brew命令" class="headerlink" title="安装brew命令"></a>安装brew命令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></table></figure><h4 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nginx</span><br></pre></td></tr></table></figure><h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx</span><br></pre></td></tr></table></figure><p>若提示命令不存在，则找到nginx可执行文件，比如：<code>/usr/local/bin/nginx</code><br>寻找nginx可执行文件可使用命令<code>find / -iname &quot;nginx&quot;</code>，一般bin目录下的nginx就是可执行文件<br>找到后，进入目录，执行：  </p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./nginx</span><br></pre></td></tr></table></figure><h4 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -s reload</span><br></pre></td></tr></table></figure><p>提示找不到命令解决方法同启动</p><h4 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h4><h5 id="查询Nginx主线程"><a href="#查询Nginx主线程" class="headerlink" title="查询Nginx主线程"></a>查询Nginx主线程</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -el|grep nginx</span><br></pre></td></tr></table></figure><p><img src="https://s2.ax1x.com/2020/02/10/15vqtU.png" alt="01"></p><h5 id="正常停止"><a href="#正常停止" class="headerlink" title="正常停止"></a>正常停止</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo kill -QUIT 进程号</span><br></pre></td></tr></table></figure><h5 id="快速停止"><a href="#快速停止" class="headerlink" title="快速停止"></a>快速停止</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo kill -TERM 进程号</span><br></pre></td></tr></table></figure><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="配置文件目录"><a href="#配置文件目录" class="headerlink" title="配置文件目录"></a>配置文件目录</h4><p>一般情况下，通过brew命令安装的nginx，配置文件目录在<code>/usr/local/etc/nginx/</code><br>若找不到上述目录，可以直接全局查找配置文件所在目录：<code>find / -iname &quot;nginx.conf&quot;</code><br>相关配置自行百度</p><h4 id="查看配置文件是否正确"><a href="#查看配置文件是否正确" class="headerlink" title="查看配置文件是否正确"></a>查看配置文件是否正确</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -t</span><br></pre></td></tr></table></figure><p>出现如下结果说明配置文件正确：<br><img src="https://s2.ax1x.com/2020/02/10/15xA9e.png" alt="02">  </p>]]></content>
     
     <summary type="html">
     
@@ -105,7 +105,7 @@
     <link href="https://loneyclown.github.io/2019/11/27/randomNotes/2019-11-27-%E5%85%B3%E4%BA%8EMAC%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%90%91%E6%97%A5%E8%91%B5%E7%AD%89%E2%80%9C%E6%B5%81%E6%B0%93%E2%80%9D%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AFdis/"/>
     <id>https://loneyclown.github.io/2019/11/27/randomNotes/2019-11-27-%E5%85%B3%E4%BA%8EMAC%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%90%91%E6%97%A5%E8%91%B5%E7%AD%89%E2%80%9C%E6%B5%81%E6%B0%93%E2%80%9D%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AFdis/</id>
     <published>2019-11-26T16:00:00.000Z</published>
-    <updated>2020-02-10T09:37:09.387Z</updated>
+    <updated>2020-02-10T11:48:53.507Z</updated>
     
     <content type="html"><![CDATA[<h5 id="题记"><a href="#题记" class="headerlink" title="题记"></a>题记</h5><p>因为近期teamviewer遭到入侵，所以对于远控软件不得不重新选择。然后就入了向日葵的坑了…然后我就各种baidu、google，最后总算是战胜了“流氓”。  </p><h2 id="MAC管理开机自启的两种方式"><a href="#MAC管理开机自启的两种方式" class="headerlink" title="MAC管理开机自启的两种方式"></a>MAC管理开机自启的两种方式</h2><h4 id="系统偏好设置里的开机自启（登录项-LoginItem）"><a href="#系统偏好设置里的开机自启（登录项-LoginItem）" class="headerlink" title="系统偏好设置里的开机自启（登录项/LoginItem）"></a>系统偏好设置里的开机自启（登录项/LoginItem）</h4><p>这种方式最简单直观<br><img src="https://s2.ax1x.com/2020/02/10/15yJ9H.png" alt="系统偏好设置1"><br><img src="https://s2.ax1x.com/2020/02/10/15ygvn.png" alt="系统偏好设置2"></p><h4 id="通过plist文件管理开机自启"><a href="#通过plist文件管理开机自启" class="headerlink" title="通过plist文件管理开机自启"></a>通过plist文件管理开机自启</h4><p>MAC分别有6个目录存放了开启自启的plist文件</p><blockquote><p>Library/Preferences/ – （当前用户设置的进程）<br>~/Library/LaunchAgents/ – （当前用户的守护进程）<br>/Library/LaunchAgents/ – （管理员设置的用户进程）<br>/Library/LaunchDaemons/ – （管理员提供的系统守护进程）<br>/System/Library/LaunchAgents/ – （系统提供的用户进程）<br>/System/Library/LaunchDaemons/ – （系统提供的系统守护进程）</p></blockquote><p>这里以向日葵为例，安装了向日葵客户端和控制端后，分别在<code>/Library/LaunchAgents/</code>、<code>/Library/LaunchDaemons/</code>目录生成了4个plist文件：<br>打开终端，输入：</p><pre><code class="shell">open /Library/LaunchAgents</code></pre><p><img src="https://s2.ax1x.com/2020/02/10/15ybvR.png" alt="LaunchAgents文件夹"><br>使用任意文本编辑器编辑<code>com.oray.sunlogin.agent.plist</code>、<code>com.oray.sunlogin.startup.plist</code>两个文件，将Disabled改为true，将RunAtLoad改为false：<br><img src="https://s2.ax1x.com/2020/02/10/15yXb6.png" alt="com.oray.sunlogin.agent.plist文件"><br><img src="https://s2.ax1x.com/2020/02/10/1561rq.png" alt="com.oray.sunlogin.startup.plist文件"><br>打开终端，输入：</p><pre><code class="shell">open /Library/LaunchDaemons</code></pre><p><img src="https://s2.ax1x.com/2020/02/10/156sZ6.png" alt="LaunchDaemons文件夹"><br>编辑<code>com.oray.sunlogin.helper.plist</code>、<code>com.oray.sunlogin.plist</code>文件，将Disabled改为true，将RunAtLoad改为false：<br><img src="https://s2.ax1x.com/2020/02/10/1564sI.png" alt="com.oray.sunlogin.helper.plist文件"><br><img src="https://s2.ax1x.com/2020/02/10/156bFS.png" alt="com.oray.sunlogin.plist文件"></p><p>这样，下次开机，向日葵便不会自启了。</p>]]></content>
     
@@ -348,38 +348,6 @@
   </entry>
   
   <entry>
-    <title>Spring data JPA项目搭建</title>
-    <link href="https://loneyclown.github.io/2018/12/16/randomNotes/2018-12-16-SpringDataJPA/"/>
-    <id>https://loneyclown.github.io/2018/12/16/randomNotes/2018-12-16-SpringDataJPA/</id>
-    <published>2018-12-15T16:00:00.000Z</published>
-    <updated>2020-02-10T10:51:14.183Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Spring-data-JPA项目搭建"><a href="#Spring-data-JPA项目搭建" class="headerlink" title="Spring data JPA项目搭建"></a>Spring data JPA项目搭建</h2><p>开发环境：IntelliJ IEDA</p><h3 id="引导"><a href="#引导" class="headerlink" title="引导"></a>引导</h3><p>打开<a href="https://start.spring.io/" target="_blank" rel="noopener">https://start.spring.io/</a><br>选择构建工具（maven或者gradle）、开发语言、SpringBoot版本<br><img src="https://s2.ax1x.com/2020/02/10/15cOAK.png" alt="引导1"><br>配置项目元数据：Group、Artifact、Options、打包方式，java版本等…<br><img src="https://s2.ax1x.com/2020/02/10/15giHP.png" alt="引导2"><br>选择依赖（Dependencies）<br><img src="https://s2.ax1x.com/2020/02/10/15gcgH.png" alt="引导3"><br>安装的依赖：Spring Web、Spring Data JPA、Spring Security、Lombok、Spring Boot DevTools<br>然后点击<code>Generate</code>构建，将zip压缩包下载下来</p><h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><p>将上一步下载的压缩包解压，导入到IDEA<br>选择<code>从外部模型导入</code>，然后选择<code>Maven</code><br><img src="https://s2.ax1x.com/2020/02/10/15IfNn.png" alt="导入1"><br>设置项目根目录，勾选<code>Search for projects recursively</code>，其他默认，点下一步<br><img src="https://s2.ax1x.com/2020/02/10/15IOE9.png" alt="导入2"><br>一直下一步，直到完成  </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Spring-data-JPA项目搭建&quot;&gt;&lt;a href=&quot;#Spring-data-JPA项目搭建&quot; class=&quot;headerlink&quot; title=&quot;Spring data JPA项目搭建&quot;&gt;&lt;/a&gt;Spring data JPA项目搭建&lt;/h2&gt;&lt;p&gt;开发
-      
-    
-    </summary>
-    
-    
-      <category term="随拾" scheme="https://loneyclown.github.io/categories/%E9%9A%8F%E6%8B%BE/"/>
-    
-    
-      <category term="java" scheme="https://loneyclown.github.io/tags/java/"/>
-    
-      <category term="SSM" scheme="https://loneyclown.github.io/tags/SSM/"/>
-    
-      <category term="Spring" scheme="https://loneyclown.github.io/tags/Spring/"/>
-    
-      <category term="Spring data JPA" scheme="https://loneyclown.github.io/tags/Spring-data-JPA/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Spring Boot 项目搭建</title>
     <link href="https://loneyclown.github.io/2018/12/16/randomNotes/2018-12-16-SpringBoot2%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/"/>
     <id>https://loneyclown.github.io/2018/12/16/randomNotes/2018-12-16-SpringBoot2%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/</id>
@@ -408,6 +376,38 @@
       <category term="Spring" scheme="https://loneyclown.github.io/tags/Spring/"/>
     
       <category term="Spring Boot" scheme="https://loneyclown.github.io/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring data JPA项目搭建</title>
+    <link href="https://loneyclown.github.io/2018/12/16/randomNotes/2018-12-16-SpringDataJPA/"/>
+    <id>https://loneyclown.github.io/2018/12/16/randomNotes/2018-12-16-SpringDataJPA/</id>
+    <published>2018-12-15T16:00:00.000Z</published>
+    <updated>2020-02-10T10:51:14.183Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Spring-data-JPA项目搭建"><a href="#Spring-data-JPA项目搭建" class="headerlink" title="Spring data JPA项目搭建"></a>Spring data JPA项目搭建</h2><p>开发环境：IntelliJ IEDA</p><h3 id="引导"><a href="#引导" class="headerlink" title="引导"></a>引导</h3><p>打开<a href="https://start.spring.io/" target="_blank" rel="noopener">https://start.spring.io/</a><br>选择构建工具（maven或者gradle）、开发语言、SpringBoot版本<br><img src="https://s2.ax1x.com/2020/02/10/15cOAK.png" alt="引导1"><br>配置项目元数据：Group、Artifact、Options、打包方式，java版本等…<br><img src="https://s2.ax1x.com/2020/02/10/15giHP.png" alt="引导2"><br>选择依赖（Dependencies）<br><img src="https://s2.ax1x.com/2020/02/10/15gcgH.png" alt="引导3"><br>安装的依赖：Spring Web、Spring Data JPA、Spring Security、Lombok、Spring Boot DevTools<br>然后点击<code>Generate</code>构建，将zip压缩包下载下来</p><h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><p>将上一步下载的压缩包解压，导入到IDEA<br>选择<code>从外部模型导入</code>，然后选择<code>Maven</code><br><img src="https://s2.ax1x.com/2020/02/10/15IfNn.png" alt="导入1"><br>设置项目根目录，勾选<code>Search for projects recursively</code>，其他默认，点下一步<br><img src="https://s2.ax1x.com/2020/02/10/15IOE9.png" alt="导入2"><br>一直下一步，直到完成  </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Spring-data-JPA项目搭建&quot;&gt;&lt;a href=&quot;#Spring-data-JPA项目搭建&quot; class=&quot;headerlink&quot; title=&quot;Spring data JPA项目搭建&quot;&gt;&lt;/a&gt;Spring data JPA项目搭建&lt;/h2&gt;&lt;p&gt;开发
+      
+    
+    </summary>
+    
+    
+      <category term="随拾" scheme="https://loneyclown.github.io/categories/%E9%9A%8F%E6%8B%BE/"/>
+    
+    
+      <category term="java" scheme="https://loneyclown.github.io/tags/java/"/>
+    
+      <category term="SSM" scheme="https://loneyclown.github.io/tags/SSM/"/>
+    
+      <category term="Spring" scheme="https://loneyclown.github.io/tags/Spring/"/>
+    
+      <category term="Spring data JPA" scheme="https://loneyclown.github.io/tags/Spring-data-JPA/"/>
     
   </entry>
   
