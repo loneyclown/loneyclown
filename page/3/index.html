@@ -1,1225 +1,603 @@
 <!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
 
 
 
-
-
-<html class="theme-next gemini use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="generator" content="Hexo 3.9.0">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
-
-<link rel="stylesheet" href="/css/main.css?v=7.3.0">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
-
-<script id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '7.3.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    search: {
-      root: '/',
-      path: 'search.xml'
-    },
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    }
-  };
-</script>
-
-  <meta property="og:type" content="website">
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Loneyclown | 沐甚雨，栉疾风</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content>
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Loneyclown">
-<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:url" content="https://loneyclown.github.io/page/3/index.html">
 <meta property="og:site_name" content="Loneyclown">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Loneyclown">
-  <link rel="canonical" href="http://yoursite.com/page/3/">
+    
+        <link rel="alternate" type="application/atom+xml" title="Loneyclown" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
 
-
-<script id="page.configurations">
-  CONFIG.page = {
-    sidebar: "",
-  };
-</script>
-
-  <title>Loneyclown</title>
-  
-
-
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .motion-element,
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
-
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+    <!-- custom head -->
+    
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body>
+    <div id="loading" class="active"></div>
 
-  
-  
-  
-  
-
-  <div style="position: fixed; left: 0; bottom: 0;width: 330px; height: 110px;">
-    <iframe 
-      frameborder="no"
-      border="0" 
-      marginwidth="0" 
-      marginheight="0" 
-      width=330 
-      height=110 
-      src="//music.163.com/outchain/player?type=0&id=2912765047&auto=1&height=90"
-    >
-    </iframe>
-  </div>
-
-  <div class="container sidebar-position-left page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Loneyclown</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://i.postimg.cc/RFcMBp5W/QQ20191210-0.png)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://i.postimg.cc/B64j4hb6/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Loneyclown</h5>
+          <a href="mailto:loneyclown@outlook.com" title="loneyclown@outlook.com" class="mail">loneyclown@outlook.com</a>
+        </hgroup>
+      </div>
     </div>
-        <p class="site-subtitle">沐甚雨，栉疾风</p>
-      
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+      </ul>
+    </div>
   </div>
+</aside>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-
-
-<nav class="site-nav">
-    <ul id="menu" class="menu">
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Loneyclown</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
         
         
-        
-          
-          <li class="menu-item menu-item-首页">
-      
+    </div>
+</header>
+<header class="content-header index-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Loneyclown</h1>
+        <h5 class="subtitle">
+            
+                沐甚雨，栉疾风
+            
+        </h5>
+    </div>
+
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
-  </li>
+</header>
+
+<div class="container body-wrap">
+
+    <ul class="post-list">
+    
+        <li class="post-list-item fade">
+            <article id="blog-studyNotes/2018-07-12-notes"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-07-12 00:00:00" datetime="2018-07-11T16:00:00.000Z"  itemprop="datePublished">2018-07-12</time>
+
         
-        
-        
-          
-          <li class="menu-item menu-item-标签">
-      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a></li></ul>
+
+
+
+    </div>
+
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-分类">
-      
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/07/12/studyNotes/2018-07-12-notes/">JS时间对象操作以及时间格式化</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        JS时间对象取当前时间1var nowTime = new Date();
+
+取年、月、日123nowTime.getFullYear(); // 年nowTime.getMonth() + 1; // 月 因为 getMonth 返回的是从(0-11)的月份，故需+1nowTime.getDate(); // 日
+
+其他方法 getgetTime()：返回从 1970 年 1 月 1 日至...
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-归档">
-      
+        <a href="/2018/07/12/studyNotes/2018-07-12-notes/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
     
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Date对象/">Date对象</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/时间对象/">时间对象</a></li></ul>
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    </div>
+    
+</article>
 
-  </li>
-        <li class="menu-item menu-item-search">
-          <a href="javascript:;" class="popup-trigger">
-          
-            <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
-      
-    </ul>
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+    
+        <li class="post-list-item fade">
+            <article id="blog-randomNotes/2018-07-03-vscode"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-07-03 00:00:00" datetime="2018-07-02T16:00:00.000Z"  itemprop="datePublished">2018-07-03</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/随拾/">随拾</a></li></ul>
+
+
+
     </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+
+    
 
 
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/07/03/randomNotes/2018-07-03-vscode/">VS Code 快捷键（中英文对照版）</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        VS Code 快捷键（中英文对照版）vs Code快捷键
+    
+      
+        
+          按 Press
+        
+          功能 Function
+      
+    
+    
+      
+        
+          Ctrl + Shift + P，F1
+        
+          显示命令面板 Show Com...
+    
+
+        <a href="/2018/07/03/randomNotes/2018-07-03-vscode/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vs-code/">vs code</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-studyNotes/2018-06-29-notes"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-06-29 00:00:00" datetime="2018-06-28T16:00:00.000Z"  itemprop="datePublished">2018-06-29</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/06/29/studyNotes/2018-06-29-notes/">js判断json对象是否为空</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        js判断json对象是否为空1$.isEmptyObjec(&#123;&#125;);
+
+jQuery.isEmptyObject()函数用于判断指定参数是否是一个空对象。所谓”空对象”，即不包括任何可枚举(自定义)的属性。简而言之，就是该对象没有属性可以通过for...in迭代。该函数属于全局jQuery对象。返回值jQuery.isEmptyObject()函数的返回值为Boolean...
+    
+
+        <a href="/2018/06/29/studyNotes/2018-06-29-notes/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-essays/2018-06-08-essays"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-06-26 00:00:00" datetime="2018-06-25T16:00:00.000Z"  itemprop="datePublished">2018-06-26</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/随笔/">随笔</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/06/26/essays/2018-06-08-essays/">美文美句收录集（一）</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        其一愿你三冬暖，愿你春不寒；愿你天黑有灯，下雨有伞；愿你路上有两人相伴。愿你所以快乐，无需假装；愿你此生尽兴，赤诚善良。愿时光能缓，愿故人不散；愿有人陪你颠沛流离。愿你惦念的人能和你道早安，愿你独创的日子里不觉得孤单。愿你人间走一遭，圆满了三界六道，看透了是非善恶；从此福来心至，皆是逍遥。  
+其二愿你一生有山可靠，有树可栖，与心爱之人，春赏花，夏纳凉，秋登山，冬扫雪。愿你在海边踏沙，有良人...
+    
+
+        <a href="/2018/06/26/essays/2018-06-08-essays/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-randomNotes/2018-06-26-bundle-cmd"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-06-26 00:00:00" datetime="2018-06-25T16:00:00.000Z"  itemprop="datePublished">2018-06-26</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/随拾/">随拾</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/06/26/randomNotes/2018-06-26-bundle-cmd/">bundle 命令</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        Tasks[命令一览]bundle checkChecks if the dependencies listed in Gemfile are satisfied by currently installed gems[检查当前安装的gem是否满足Gemfile中列出的依赖项]
+bundle execRun the command in context of the bundle[在捆绑包的...
+    
+
+        <a href="/2018/06/26/randomNotes/2018-06-26-bundle-cmd/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ruby/">Ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bundle/">bundle</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-Git/2018-06-26-Git-Bash"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-06-08 00:00:00" datetime="2018-06-07T16:00:00.000Z"  itemprop="datePublished">2018-06-08</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/06/08/Git/2018-06-26-Git-Bash/">Git Bash 操作</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        Git Bash 操作Git基本常用命令如下：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859mkdir：         XX (创建一个空目录 XX指目录名)pwd：          显示当前目录的路径。git ini...
+    
+
+        <a href="/2018/06/08/Git/2018-06-26-Git-Bash/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git-Bash/">Git Bash</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-Node/2018-06-26-Node-notes"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-06-08 00:00:00" datetime="2018-06-07T16:00:00.000Z"  itemprop="datePublished">2018-06-08</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/06/08/Node/2018-06-26-Node-notes/">Node 学习笔记</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        Node 学习笔记窝·兹基·谢德创建一个server服务12345678// 引入http模块const http = require('http');//创建一个http服务http.createServer(function(req, res)&#123;&#125;).listen(8088, "127.0.0.1");console.log("服务启动成功，请访问：127.0.0.1...
+    
+
+        <a href="/2018/06/08/Node/2018-06-26-Node-notes/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Express/">Express</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/serve-favicon/">serve-favicon</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/中间件/">中间件</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-studyNotes/2018-06-08-notes"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-06-08 00:00:00" datetime="2018-06-07T16:00:00.000Z"  itemprop="datePublished">2018-06-08</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/06/08/studyNotes/2018-06-08-notes/">CSS小知识以及mongod.conf相关配置</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        媒介查询H5端横屏与竖屏12@media all and(orientation: landscape) /* 横屏CSS */@media all and(orientation: portrait) /* 竖屏CSS */
+
+CSS 动态计算长度值1calc( ... )
+
+mongod.conf1234logpath = /usr/local/src/mongodb/logs/mong...
+    
+
+        <a href="/2018/06/08/studyNotes/2018-06-08-notes/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mongod/">mongod</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+    </ul>
+
+    
+<nav id="page-nav">
+    <div class="inner">
+    <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
     </div>
 </nav>
 
+
 </div>
-    </header>
 
-    
-
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-            
-
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/29/studyNotes/2018-06-29-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/06/29/studyNotes/2018-06-29-notes/" class="post-title-link" itemprop="url">js判断json对象是否为空</a>
-              
-            
-          </h1>
+        <footer class="footer">
+    <div class="top">
         
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-06-29 00:00:00" itemprop="dateCreated datePublished" datetime="2018-06-29T00:00:00+08:00">2018-06-29</time>
-            </span>
-          
+        <p>
             
-
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-01-16 14:05:01" itemprop="dateModified" datetime="2020-01-16T14:05:01+08:00">2020-01-16</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h3 id="js判断json对象是否为空"><a href="#js判断json对象是否为空" class="headerlink" title="js判断json对象是否为空"></a>js判断json对象是否为空</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.isEmptyObjec(&#123;&#125;);</span><br></pre></td></tr></table></figure>
-
-<p><code>jQuery.isEmptyObject()</code>函数用于判断指定参数是否是一个空对象。<br>所谓”空对象”，即不包括任何可枚举(自定义)的属性。简而言之，就是该对象没有属性可以通过<code>for...in</code>迭代。<br>该函数属于全局<code>jQuery</code>对象。<br><strong>返回值</strong><br><code>jQuery.isEmptyObject()</code>函数的返回值为<code>Boolean</code>类型，如果指定的参数是空对象，则返回<code>true</code>，否则返回<code>false</code>。 </p>
-<p><em>参考链接：<a href="http://www.365mini.com/page/jquery-quickstart.htm" target="_blank" rel="noopener">jQuery 快速入门教程</a></em></p>
-
-          
-        
-      
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
     </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/26/essays/2018-06-08-essays/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
+    <div class="bottom">
+        <p><span>Loneyclown &copy; 2020</span>
+            <span>
                 
-                
-                <a href="/2018/06/26/essays/2018-06-08-essays/" class="post-title-link" itemprop="url">美文美句收录集（一）</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-06-26 00:00:00" itemprop="dateCreated datePublished" datetime="2018-06-26T00:00:00+08:00">2018-06-26</time>
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
             </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-12 09:43:11" itemprop="dateModified" datetime="2019-10-12T09:43:11+08:00">2019-10-12</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随笔/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="其一"><a href="#其一" class="headerlink" title="其一"></a>其一</h1><p>愿你三冬暖，愿你春不寒；<br>愿你天黑有灯，下雨有伞；<br>愿你路上有两人相伴。<br>愿你所以快乐，无需假装；<br>愿你此生尽兴，赤诚善良。<br>愿时光能缓，愿故人不散；<br>愿有人陪你颠沛流离。<br>愿你惦念的人能和你道早安，<br>愿你独创的日子里不觉得孤单。<br>愿你人间走一遭，圆满了三界六道，看透了是非善恶；<br>从此福来心至，皆是逍遥。  </p>
-<h1 id="其二"><a href="#其二" class="headerlink" title="其二"></a>其二</h1><p>愿你一生有山可靠，有树可栖，与心爱之人，春赏花，夏纳凉，秋登山，冬扫雪。<br>愿你在海边踏沙，有良人为伴。<br>愿你在山巅眺望云雾，有痴傻的他紧拉。<br>愿你如愿遇到命中的缘分，不早也不晚，不急也不缓。<br>愿你爱的人也恰好爱着你，愿你一生努力，一生被爱。  </p>
-<h1 id="其三"><a href="#其三" class="headerlink" title="其三"></a>其三</h1><h6 id="〖帝王〗"><a href="#〖帝王〗" class="headerlink" title="〖帝王〗"></a>〖帝王〗</h6><p>待我君临天下，许你风云叱吒待你君临天下，许谁风云叱吒，桃夭三千春意阑，我已嫁与他家。  </p>
-<h6 id="〖丞相〗"><a href="#〖丞相〗" class="headerlink" title="〖丞相〗"></a>〖丞相〗</h6><p>待我一人之下，许你赌书泼茶。待你一人之下，许谁赌书泼茶，只酒一杯抚琴叹，我已白首韶华。  </p>
-<h6 id="〖将军〗"><a href="#〖将军〗" class="headerlink" title="〖将军〗"></a>〖将军〗</h6><p>待我功成名就，许你一世无忧。待你功成名就，许谁一世无忧，三千情思绾惆怅，我已纵马风流。  </p>
-<h6 id="〖书生〗"><a href="#〖书生〗" class="headerlink" title="〖书生〗"></a>〖书生〗</h6><p>待我榜眼探花，许你桃夭灼华。待你榜眼探花，许谁桃夭灼华，此生本意逍遥游，我已青丝华发。  </p>
-<h6 id="〖侠客〗"><a href="#〖侠客〗" class="headerlink" title="〖侠客〗"></a>〖侠客〗</h6><p>待我不再有她，许你耕织篱下。待你不再有她，许谁耕织篱下，十里桃花为君守，我已红颜疏花。  </p>
-<h6 id="〖红颜〗"><a href="#〖红颜〗" class="headerlink" title="〖红颜〗"></a>〖红颜〗</h6><p>你说入我相思门，知我相思苦，怎知，那年花嫁，高头大马，怀中窝她，我笑声喑哑。你说青衣最无情，最是薄凉性，怎知，那年初夏，醉戏琵琶，负尽牵挂，我无声泪下。  </p>
-
-          
-        
-      
+        </p>
     </div>
+</footer>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/26/randomNotes/2018-06-26-bundle-cmd/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/06/26/randomNotes/2018-06-26-bundle-cmd/" class="post-title-link" itemprop="url">bundle 命令</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-06-26 00:00:00" itemprop="dateCreated datePublished" datetime="2018-06-26T00:00:00+08:00">2018-06-26</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-12 09:43:11" itemprop="dateModified" datetime="2019-10-12T09:43:11+08:00">2019-10-12</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随拾/" itemprop="url" rel="index"><span itemprop="name">随拾</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="Tasks-命令一览"><a href="#Tasks-命令一览" class="headerlink" title="Tasks[命令一览]"></a>Tasks[命令一览]</h1><h6 id="bundle-check"><a href="#bundle-check" class="headerlink" title="bundle check"></a>bundle check</h6><p>Checks if the dependencies listed in Gemfile are satisfied by currently installed gems<br>[检查当前安装的gem是否满足Gemfile中列出的依赖项]</p>
-<h6 id="bundle-exec"><a href="#bundle-exec" class="headerlink" title="bundle exec"></a>bundle exec</h6><p>Run the command in context of the bundle<br>[在捆绑包的上下文中运行命令]</p>
-<h6 id="bundle-help-TASK"><a href="#bundle-help-TASK" class="headerlink" title="bundle help [TASK]"></a>bundle help [TASK]</h6><p>Describe available tasks or one specific task<br>[描述可用的任务或一个特定的任务]</p>
-<h6 id="bundle-init"><a href="#bundle-init" class="headerlink" title="bundle init"></a>bundle init</h6><p>Generates a Gemfile into the current working directory<br>[生成一个Gemfile到当前的工作目录]</p>
-<h6 id="bundle-install"><a href="#bundle-install" class="headerlink" title="bundle install"></a>bundle install</h6><p>Install the current environment to the system<br>[将当前环境安装到系统]</p>
-<h6 id="bundle-lock"><a href="#bundle-lock" class="headerlink" title="bundle lock"></a>bundle lock</h6><p>Checks if the dependencies listed in Gemfile are satisfied by currently installed gems<br>[将包绑定到当前的一组依赖项，包括所有的子依赖项]</p>
-<h6 id="bundle-pack"><a href="#bundle-pack" class="headerlink" title="bundle pack"></a>bundle pack</h6><p>Packs all the gems to vendor/cache<br>[将所有gems打包到vendor/cache]</p>
-<h6 id="bundle-show"><a href="#bundle-show" class="headerlink" title="bundle show"></a>bundle show</h6><p>Shows all gems that are part of the bundle<br>[显示作为捆绑包一部分的所有gems]</p>
-<h6 id="bundle-unlock"><a href="#bundle-unlock" class="headerlink" title="bundle unlock"></a>bundle unlock</h6><p>Unlock the bundle. This allows gem versions to be changed<br>[解锁捆绑包。 这可以改变gem版本]</p>
-<h1 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h1><p><code>bundle pack</code><br>这个命令可以打包你的gems到vendor/cache目录下。然后你把项目给别的开发者，别人就可以使用：<br><code>bundle install</code><br>来安装项目依赖的gems了。</p>
-<p>但是当你想把项目部署到生产环境的话，假如gems出现新版本，可能导致项目出现错误，这个时候，我们就需要锁定gem的版本。<br><code>bundle lock</code><br>这个命令会在rails的根目录下生成一个Gemfile.lock文件。类似于这样的：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">--- </span><br><span class="line">dependencies: </span><br><span class="line">- rails: = 3.0.0.beta</span><br><span class="line">- sqlite3-ruby: &quot;&gt;= 0&quot;</span><br><span class="line">- pg: &quot;&gt;= 0&quot;</span><br><span class="line">specs: </span><br><span class="line">- text-hyphen: </span><br><span class="line">    version: 1.0.0</span><br><span class="line">- builder: </span><br><span class="line">    version: 2.1.2</span><br><span class="line">- i18n: </span><br><span class="line">    version: 0.3.3</span><br></pre></td></tr></table></figure>
-
-<p>当你在Gemfile文件里增加了一个新的gem，比如“hpricot”你运行：<br><code>bundle check</code><br>会提示：You changed your Gemfile after locking. Please relock using ‘bundle unlock’<br>想修改Gemfile必须先解锁Gemfile文件：<br><code>bundle unlock</code><br>然后才能修改，修改完再锁定。<br><code>bundle install</code><br>这条命令会自动安装Gemfile里的所有gem。<br>然后我们再检测：<br><code>bundle check</code><br>提示：The Gemfile’s dependencies are satisfied<br>这就安全了。<br>然后我们可以打包了：<br><code>bundle pack</code><br>Copying .gem files into vendor/cache<br>…</p>
-<p>打包完以后，锁定我们的gems:<br><code>bundle lock</code><br>这下你就可以安全部署你的app了。</p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/08/Node/2018-06-26-Node-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/06/08/Node/2018-06-26-Node-notes/" class="post-title-link" itemprop="url">Node 学习笔记</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-06-08 00:00:00" itemprop="dateCreated datePublished" datetime="2018-06-08T00:00:00+08:00">2018-06-08</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-12 09:43:11" itemprop="dateModified" datetime="2019-10-12T09:43:11+08:00">2019-10-12</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="Node-学习笔记"><a href="#Node-学习笔记" class="headerlink" title="Node 学习笔记"></a>Node 学习笔记</h1><h2 id="窝·兹基·谢德"><a href="#窝·兹基·谢德" class="headerlink" title="窝·兹基·谢德"></a>窝·兹基·谢德</h2><h3 id="创建一个server服务"><a href="#创建一个server服务" class="headerlink" title="创建一个server服务"></a>创建一个server服务</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入http模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个http服务</span></span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;).listen(<span class="number">8088</span>, <span class="string">"127.0.0.1"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"服务启动成功，请访问：127.0.0.1"</span>);</span><br></pre></td></tr></table></figure>
-
-<h2 id="Node-中间件"><a href="#Node-中间件" class="headerlink" title="Node 中间件"></a>Node 中间件</h2><p>favicon的处理<br>安装依赖</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install serve-favicon --save</span><br></pre></td></tr></table></figure>
-
-<p>添加代码到server.js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> favicon = <span class="built_in">require</span>(<span class="string">'serve-favicon'</span>);</span><br><span class="line">app.use(favicon(__dirname + <span class="string">'/favicon.ico'</span>));</span><br></pre></td></tr></table></figure>
-
-<h3 id="自己编写中间件"><a href="#自己编写中间件" class="headerlink" title="自己编写中间件"></a>自己编写中间件</h3><p>中间件大致结构</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.use(xxx()); <span class="comment">// xxx()可以是个匿名函数也可以是第三方中间件那样:</span></span><br><span class="line">app.use(bodyParser());</span><br></pre></td></tr></table></figure>
-
-<p>一个打印请求时间的中间件（匿名结构）</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Time:'</span>, <span class="built_in">Date</span>.now());</span><br><span class="line">  next();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="挂载中间件"><a href="#挂载中间件" class="headerlink" title="挂载中间件"></a>挂载中间件</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 挂载至 /user/:id 的中间件，任何指向 /user/:id 的请求都会执行它</span></span><br><span class="line">app.use(<span class="string">'/user/:id'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Request Type:'</span>, req.method);</span><br><span class="line">  next();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>也就是说只有请求开头user/:id 才会被这个中间件处理，如果不是则会被忽略。<br>此外上述的req.method是指请求的方式例如：get,post,put,delete</p>
-<h3 id="第一个Node-js程序"><a href="#第一个Node-js程序" class="headerlink" title="第一个Node.js程序"></a>第一个Node.js程序</h3><p>server.js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//依赖一个http模块，相当于java的import，与C#中的using</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个服务器对象</span></span><br><span class="line">server = http.createSever(<span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line"><span class="comment">//设置请求成功时响应头部的MIME为纯文本</span></span><br><span class="line">res.writeHeader(<span class="number">200</span>, &#123; <span class="string">"Content-Type"</span>: <span class="string">"text/plain"</span> &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//向客户端输出字符</span></span><br><span class="line">res.end(<span class="string">"Hello World\n"</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//让服务器在8088端口开始运行</span></span><br><span class="line">server.listen(<span class="number">8088</span>, <span class="string">"127.0.0.1);</span></span><br><span class="line"><span class="string">console.log("</span>Server is running at <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8088</span><span class="string">");</span></span><br></pre></td></tr></table></figure>
-
-<p>引入 required 模块：我们可以使用 require 指令来载入 Node.js 模块。<br>创建服务器：服务器可以监听客户端的请求，类似于TomCat、IIS、Apache 、Nginx 等 HTTP 服务器。<br>接收请求与响应请求 服务器很容易创建，客户端可以使用浏览器或终端发送 HTTP 请求，服务器接收请求后返回响应数据。</p>
-<p>第一行请求（require）Node.js 自带的 http 模块，并且把它赋值给 http 变量。<br>接下来我们调用 http 模块提供的函数： createServer 。这个函数会返回 一个对象，这个对象有一个叫做 listen 的方法，这个方法有一个数值参数， 指定这个 HTTP 服务器监听的端口号。</p>
-<h3 id="一个简单的Express项目"><a href="#一个简单的Express项目" class="headerlink" title="一个简单的Express项目"></a>一个简单的Express项目</h3><p>index.js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入express模块</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个app对象，类似一个web应用（网站）</span></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">//接受指定路径的请求，指定回调函数</span></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'Hello World!'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建一个web服务器，可以认为就是web服务器对象</span></span><br><span class="line"><span class="comment">//监听9988端口，当监听成功时回调</span></span><br><span class="line"><span class="keyword">var</span> server = app.listen(<span class="number">9988</span>, <span class="string">'localhost'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> host = server.address().address;<span class="comment">//地址</span></span><br><span class="line">  <span class="keyword">var</span> port = server.address().port;<span class="comment">//端口</span></span><br><span class="line">  </span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'应用实例，访问地址为 http://%s:%s'</span>, host, port);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/08/Git/2018-06-26-Git-Bash/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/06/08/Git/2018-06-26-Git-Bash/" class="post-title-link" itemprop="url">Git Bash 操作</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-06-08 00:00:00" itemprop="dateCreated datePublished" datetime="2018-06-08T00:00:00+08:00">2018-06-08</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-12 09:43:11" itemprop="dateModified" datetime="2019-10-12T09:43:11+08:00">2019-10-12</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="Git-Bash-操作"><a href="#Git-Bash-操作" class="headerlink" title="Git Bash 操作"></a>Git Bash 操作</h1><h2 id="Git基本常用命令如下："><a href="#Git基本常用命令如下：" class="headerlink" title="Git基本常用命令如下："></a>Git基本常用命令如下：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">mkdir：         XX (创建一个空目录 XX指目录名)</span><br><span class="line"></span><br><span class="line">pwd：          显示当前目录的路径。</span><br><span class="line"></span><br><span class="line">git init          把当前的目录变成可以管理的git仓库，生成隐藏.git文件。</span><br><span class="line"></span><br><span class="line">git add XX       把xx文件添加到暂存区去。</span><br><span class="line"></span><br><span class="line">git commit –m “XX”  提交文件 –m 后面的是注释。</span><br><span class="line"></span><br><span class="line">git status        查看仓库状态</span><br><span class="line"></span><br><span class="line">git diff  XX      查看XX文件修改了那些内容</span><br><span class="line"></span><br><span class="line">git log          查看历史记录</span><br><span class="line"></span><br><span class="line">git reset  --hard HEAD^ 或者 git reset  --hard HEAD~ 回退到上一个版本 // (如果想回退到100个版本，使用git reset –hard HEAD~100 )</span><br><span class="line"></span><br><span class="line">cat XX         查看XX文件内容</span><br><span class="line"></span><br><span class="line">git reflog       查看历史记录的版本号id</span><br><span class="line"></span><br><span class="line">git checkout -- XX  把XX文件在工作区的修改全部撤销。</span><br><span class="line"></span><br><span class="line">git rm XX          删除XX文件</span><br><span class="line"></span><br><span class="line">git remote add origin &lt;https://github.com/tugenhua0707/testgit&gt; 关联一个远程库</span><br><span class="line"></span><br><span class="line">git push –u(第一次要用-u 以后不需要) origin master 把当前master分支推送到远程库</span><br><span class="line"></span><br><span class="line">git clone &lt;https://github.com/tugenhua0707/testgit&gt;  从远程库中克隆</span><br><span class="line"></span><br><span class="line">git checkout –b dev  创建dev分支 并切换到dev分支上</span><br><span class="line"></span><br><span class="line">git branch  查看当前所有的分支</span><br><span class="line"></span><br><span class="line">git checkout master 切换回master分支</span><br><span class="line"></span><br><span class="line">git merge dev    在当前的分支上合并dev分支</span><br><span class="line"></span><br><span class="line">git branch –d dev 删除dev分支</span><br><span class="line"></span><br><span class="line">git branch name  创建分支</span><br><span class="line"></span><br><span class="line">git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作</span><br><span class="line"></span><br><span class="line">git stash list 查看所有被隐藏的文件列表</span><br><span class="line"></span><br><span class="line">git stash apply 恢复被隐藏的文件，但是内容不删除</span><br><span class="line"></span><br><span class="line">git stash drop 删除文件</span><br><span class="line"></span><br><span class="line">git stash pop 恢复文件的同时 也删除文件</span><br><span class="line"></span><br><span class="line">git remote 查看远程库的信息</span><br><span class="line"></span><br><span class="line">git remote –v 查看远程库的详细信息</span><br><span class="line"></span><br><span class="line">git push origin master  Git会把master分支推送到远程库对应的远程分支上</span><br></pre></td></tr></table></figure>
-
-<h2 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"></span><br><span class="line">git git add [文件名] // 添加文件到暂存区，提交当前目录全部文件文件名填&quot;.&quot;</span><br><span class="line"></span><br><span class="line">git commit -m &apos;内容&apos; // 提交内容， 加[-m &apos;内容&apos;]为为当次提交添加注释</span><br><span class="line"></span><br><span class="line">git status // 查看是否还有文件未提交</span><br><span class="line"></span><br><span class="line">git diff [文件名]// 比较差异</span><br><span class="line"></span><br><span class="line">git log //查看日志 (git log –pretty=oneline, &apos;单行显示日志&apos;)</span><br><span class="line"></span><br><span class="line">git reset  --hard HEAD^ // 回退到上一个版本,如果要回退到上上个版本只需把HEAD^ 改成 HEAD^^ 以此类推,(git reset  --hard HEAD~100 , &apos;回退到前100个版本&apos;)</span><br><span class="line"></span><br><span class="line">git reset  --hard [版本号] // 回退到指定版本 (git reflog, &apos;获取版本号&apos;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Clone-项目"><a href="#Clone-项目" class="headerlink" title="Clone 项目"></a>Clone 项目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@git.oschina.net:ifengye/test.git //SSH地址</span><br></pre></td></tr></table></figure>
-
-<h2 id="提交项目"><a href="#提交项目" class="headerlink" title="提交项目"></a>提交项目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line">git add .</span><br><span class="line">git commit -m &apos;init&apos; //init为说明文字</span><br><span class="line">git commit --amend //查看当前log</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><p>在了解之前，先注册github账号，由于你的本地Git仓库和github仓库之间的传输是通过SSH加密的，所以需要一点设置：<br>第一步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果有的话，直接跳过此如下命令，如果没有的话，打开命令行，输入如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen  -t rsa –C “youremail@example.com”</span><br></pre></td></tr></table></figure>
-
-<p>,由于我本地此前运行过一次，所以本地有，如下所示：<br><img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323753352.PNG" alt="avatar"><br>id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。<br>第二步：登录github,打开” settings”中的SSH Keys页面，然后点击“Add SSH Key”,填上任意title，在Key文本框里黏贴id_rsa.pub文件的内容。<br><img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323355322.PNG" alt="avatar"><br>点击 Add Key，你就应该可以看到已经添加的key。<br><img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323592489.PNG" alt="avatar"></p>
-<ol>
-<li>如何添加远程库？<br>现在的情景是：我们已经在本地创建了一个Git仓库后，又想在github创建一个Git仓库，并且希望这两个仓库进行远程同步，这样github的仓库可以作为备份，又可以其他人通过该仓库来协作。<br>首先，登录github上，然后在右上角找到“create a new repo”创建一个新的仓库。如下：<br><img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323213968.PNG" alt="avatar"><br>在Repository name填入testgit，其他保持默认设置，点击“Create repository”按钮，就成功地创建了一个新的Git仓库：<br><img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323934746.PNG" alt="avatar"><br>目前，在GitHub上的这个testgit仓库还是空的，GitHub告诉我们，可以从这个仓库克隆出新的仓库，也可以把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到GitHub仓库。<br>现在，我们根据GitHub的提示，在本地的testgit仓库下运行命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin &lt;https://github.com/tugenhua0707/testgit.git&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>所有的如下：<br><img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323816495.PNG" alt="avatar"><br>把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。<br>由于远程库是空的，我们第一次推送master分支时，加上了 –u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。推送成功后，可以立刻在github页面中看到远程库的内容已经和本地一模一样了，上面的要输入github的用户名和密码如下所示：   <img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323652630.PNG" alt="avatar"><br>从现在起，只要本地作了提交，就可以通过如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<p>把本地master分支的最新修改推送到github上了，现在你就拥有了真正的分布式版本库了。</p>
-<ol start="2">
-<li>如何从远程库克隆？<br>上面我们了解了先有本地库，后有远程库时候，如何关联远程库。<br>现在我们想，假如远程库有新的内容了，我想克隆到本地来 如何克隆呢？<br>首先，登录github，创建一个新的仓库，名字叫testgit2.如下：  <img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323066741.PNG" alt="avatar"><br>如下，我们看到：<br><img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323087143.PNG" alt="avatar"><br>现在，远程库已经准备好了，下一步是使用命令git clone克隆一个本地库了。如下所示：<br><img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323653601.PNG" alt="avatar"><br>接着在我本地目录下 生成testgit2目录了，如下所示：<br><img src="http://www.admin10000.com/UploadFiles/Document/201410/27/20141027155323810970.PNG" alt="avatar"></li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/08/studyNotes/2018-06-08-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/06/08/studyNotes/2018-06-08-notes/" class="post-title-link" itemprop="url">CSS小知识以及mongod.conf相关配置</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-06-08 00:00:00" itemprop="dateCreated datePublished" datetime="2018-06-08T00:00:00+08:00">2018-06-08</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-01-16 14:06:48" itemprop="dateModified" datetime="2020-01-16T14:06:48+08:00">2020-01-16</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h3 id="媒介查询H5端横屏与竖屏"><a href="#媒介查询H5端横屏与竖屏" class="headerlink" title="媒介查询H5端横屏与竖屏"></a>媒介查询H5端横屏与竖屏</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> all and(orientation: landscape) /* 横屏CSS */</span><br><span class="line">@media all and(orientation: portrait) /* 竖屏CSS */</span><br></pre></td></tr></table></figure>
-
-<h3 id="CSS-动态计算长度值"><a href="#CSS-动态计算长度值" class="headerlink" title="CSS 动态计算长度值"></a>CSS 动态计算长度值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">calc( ... )</span><br></pre></td></tr></table></figure>
-
-<h3 id="mongod-conf"><a href="#mongod-conf" class="headerlink" title="mongod.conf"></a>mongod.conf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">logpath = /usr/local/src/mongodb/logs/mongod.log</span><br><span class="line">logappend = true</span><br><span class="line">fork = true</span><br><span class="line">dbpath = /usr/local/src/mongodb/data/db</span><br></pre></td></tr></table></figure>
-
-<h5 id="此处遇坑"><a href="#此处遇坑" class="headerlink" title="此处遇坑"></a>此处遇坑</h5><p>由于mongodb目录下一开始无logs文件夹，故以–fork参数启动mongd失败。<br>报错：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">about to fork child process, waiting until server is ready for connections.</span><br><span class="line">forked procsee: 1624 (PS: 此数字不固定)</span><br><span class="line">ERROR: child process failed, exited with error number 1</span><br><span class="line">To see additional in this output, start without the &quot;--fork&quot; option.</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
-
-
-          </div>
-          
-
-        </div>
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image"
-      src="/images/avatar.jpg"
-      alt="Loneyclown">
-  <p class="site-author-name" itemprop="name">Loneyclown</p>
-  <div class="site-description motion-element" itemprop="description"></div>
-</div>
-  <nav class="site-state motion-element">
-      <div class="site-state-item site-state-posts">
-        
-          <a href="/archives">
-        
-          <span class="site-state-item-count">26</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-categories">
-        
-          
-            <a href="/categories/">
-          
-        
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">分类</span>
-        </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-tags">
-        
-          
-            <a href="/tags/">
-          
-        
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">36</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
-      </div>
-    
-  </nav>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="https://github.com/loneyclown" title="GitHub &rarr; https://github.com/loneyclown" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-    
-  </div>
-
-
-
-        </div>
-      </div>
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
     </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Loneyclown</span>
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.3.0</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
 
-        
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
-
-    
-
-  </div>
-
-  
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  <script src="/js/utils.js?v=7.3.0"></script>
-  <script src="/js/motion.js?v=7.3.0"></script>
-
-  
-  <script src="/js/affix.js?v=7.3.0"></script>
-  <script src="/js/schemes/pisces.js?v=7.3.0"></script>
-
-
-
-  
-
-  <script src="/js/next-boot.js?v=7.3.0"></script>
-
-  
-
-  
-
-  
-
-
-  
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
 
@@ -1228,33 +606,22 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.3.0"></script>
-
-
-
-
-
-
-
-
-
-
-
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
 
 
 

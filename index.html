@@ -1,2049 +1,710 @@
 <!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
 
 
 
-
-
-<html class="theme-next gemini use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="generator" content="Hexo 3.9.0">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
-
-<link rel="stylesheet" href="/css/main.css?v=7.3.0">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
-
-<script id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Gemini',
-    version: '7.3.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    search: {
-      root: '/',
-      path: 'search.xml'
-    },
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    }
-  };
-</script>
-
-  <meta property="og:type" content="website">
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Loneyclown | 沐甚雨，栉疾风</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content>
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Loneyclown">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="https://loneyclown.github.io/index.html">
 <meta property="og:site_name" content="Loneyclown">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Loneyclown">
-  <link rel="canonical" href="http://yoursite.com/">
+    
+        <link rel="alternate" type="application/atom+xml" title="Loneyclown" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
 
-
-<script id="page.configurations">
-  CONFIG.page = {
-    sidebar: "",
-  };
-</script>
-
-  <title>Loneyclown</title>
-  
-
-
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .motion-element,
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
-
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+    <!-- custom head -->
+    
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body>
+    <div id="loading" class="active"></div>
 
-  
-  
-  
-  
-
-  <div style="position: fixed; left: 0; bottom: 0;width: 330px; height: 110px;">
-    <iframe 
-      frameborder="no"
-      border="0" 
-      marginwidth="0" 
-      marginheight="0" 
-      width=330 
-      height=110 
-      src="//music.163.com/outchain/player?type=0&id=2912765047&auto=1&height=90"
-    >
-    </iframe>
-  </div>
-
-  <div class="container sidebar-position-left page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Loneyclown</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(https://i.postimg.cc/RFcMBp5W/QQ20191210-0.png)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="https://i.postimg.cc/B64j4hb6/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Loneyclown</h5>
+          <a href="mailto:loneyclown@outlook.com" title="loneyclown@outlook.com" class="mail">loneyclown@outlook.com</a>
+        </hgroup>
+      </div>
     </div>
-        <p class="site-subtitle">沐甚雨，栉疾风</p>
-      
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect active">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                文章
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+      </ul>
+    </div>
   </div>
+</aside>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-
-
-<nav class="site-nav">
-    <ul id="menu" class="menu">
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Loneyclown</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
         
         
-        
-          
-          <li class="menu-item menu-item-首页 menu-item-active">
-      
+    </div>
+</header>
+<header class="content-header index-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Loneyclown</h1>
+        <h5 class="subtitle">
+            
+                沐甚雨，栉疾风
+            
+        </h5>
+    </div>
+
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
-  </li>
+</header>
+
+<div class="container body-wrap">
+
+    <ul class="post-list">
+    
+        <li class="post-list-item fade">
+            <article id="blog-randomNotes/2020-02-10-GCP最新白嫖教程"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-02-10 00:00:00" datetime="2020-02-09T16:00:00.000Z"  itemprop="datePublished">2020-02-10</time>
+
         
-        
-        
-          
-          <li class="menu-item menu-item-标签">
-      
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/随拾/">随拾</a></li></ul>
+
+
+
+    </div>
+
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-分类">
-      
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/02/10/randomNotes/2020-02-10-GCP最新白嫖教程/">GCP最新白嫖教程</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        准备无非是用没开通过GCP的新账户或者没注册过的信用卡，这里选择新账户：
+
+没有开通过GCP的账户的Gmail账户(并夕夕等平台自行购买，3-6块一个吧)；
+梯子
+信用卡（PS：国内发行的bin为62开头的信用卡不可用）
+
+开始1. 登录GCP最好用Chrome无痕模式打开链接:GCP 命令台 https://console.cloud.google.com按照提示输入账号密码登录，注意要修...
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-归档">
-      
+        <a href="/2020/02/10/randomNotes/2020-02-10-GCP最新白嫖教程/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
     
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GCP/">GCP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/白嫖/">白嫖</a></li></ul>
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    </div>
+    
+</article>
 
-  </li>
-        <li class="menu-item menu-item-search">
-          <a href="javascript:;" class="popup-trigger">
-          
-            <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
-      
-    </ul>
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+    
+        <li class="post-list-item fade">
+            <article id="blog-randomNotes/2020-01-22-Nginx配置反向代理并重写URL"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-01-22 00:00:00" datetime="2020-01-21T16:00:00.000Z"  itemprop="datePublished">2020-01-22</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/随拾/">随拾</a></li></ul>
+
+
+
     </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+
+    
 
 
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/01/22/randomNotes/2020-01-22-Nginx配置反向代理并重写URL/">Nginx配置反向代理并重写URL</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        nginx.conf1234567# ...location /api &#123;  rewrite /api/(.+)$ /$1 break;  proxy_pass http://localhost:3000 ;  proxy_redirect off;&#125;# ...
+
+访问：http://localhost/api，会代理到http://localhost:3000，http...
+    
+
+        <a href="/2020/01/22/randomNotes/2020-01-22-Nginx配置反向代理并重写URL/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-randomNotes/2020-01-17-MAC系统Nginx安装与操作"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-01-17 00:00:00" datetime="2020-01-16T16:00:00.000Z"  itemprop="datePublished">2020-01-17</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/随拾/">随拾</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/01/17/randomNotes/2020-01-17-MAC系统Nginx安装与操作/">MAC系统Nginx安装与操作</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        安装安装Command Line tools1xcode-select --install
+
+安装brew命令1ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+安装nginx1brew install nginx
+
+操作启动1sudo nginx
+
+若提示命令...
+    
+
+        <a href="/2020/01/17/randomNotes/2020-01-17-MAC系统Nginx安装与操作/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/">macOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-randomNotes/2019-11-27-关于MAC系统上向日葵等“流氓”软件的开机自启dis"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-11-27 00:00:00" datetime="2019-11-26T16:00:00.000Z"  itemprop="datePublished">2019-11-27</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/随拾/">随拾</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/11/27/randomNotes/2019-11-27-关于MAC系统上向日葵等“流氓”软件的开机自启dis/">关于MAC系统上向日葵等“流氓”软件的开机自启dis</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        题记因为近期teamviewer遭到入侵，所以对于远控软件不得不重新选择。然后就入了向日葵的坑了…然后我就各种baidu、google，最后总算是战胜了“流氓”。  
+MAC管理开机自启的两种方式系统偏好设置里的开机自启（登录项/LoginItem）这种方式最简单直观
+通过plist文件管理开机自启MAC分别有6个目录存放了开启自启的plist文件
+
+Library/Preferences/...
+    
+
+        <a href="/2019/11/27/randomNotes/2019-11-27-关于MAC系统上向日葵等“流氓”软件的开机自启dis/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macOS/">macOS</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-randomNotes/2019-10-12-SVN命令行相关操作"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-10-12 00:00:00" datetime="2019-10-11T16:00:00.000Z"  itemprop="datePublished">2019-10-12</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/随拾/">随拾</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/10/12/randomNotes/2019-10-12-SVN命令行相关操作/">SVN命令行相关操作</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        基础操作将数据导入存储库1$ svn import https://svn.example.com/repos/MyRepo/MyProject/trunk -m "Initial project import"
+
+签出工作副本1$ svn checkout https://svn.example.com/repos/MyRepo/MyProject/trunk MyWorkingCopy
+...
+    
+
+        <a href="/2019/10/12/randomNotes/2019-10-12-SVN命令行相关操作/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/svn/">svn</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-studyNotes/2019-08-30-notes"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-08-30 00:00:00" datetime="2019-08-29T16:00:00.000Z"  itemprop="datePublished">2019-08-30</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/08/30/studyNotes/2019-08-30-notes/">无序json排序</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        代码：
+123456789101112131415let data = &#123;  L1: [1,12,5,"L1"],  B1: [1,12,5,"B1"],  L3: [1,12,5,"L3"],  L2: [1,12,5,"L2"]&#125;;let arr1 = [], arr2 = [];for(let i in data) &#123;  arr1.push(i);&#12...
+    
+
+        <a href="/2019/08/30/studyNotes/2019-08-30-notes/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-studyNotes/2019-08-12-notes"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-08-12 00:00:00" datetime="2019-08-11T16:00:00.000Z"  itemprop="datePublished">2019-08-12</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/08/12/studyNotes/2019-08-12-notes/">传统web项目配置babel@7自动兼容ES6语法</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        安装babel@712npm install --save-dev @babel/core @babel/cli @babel/preset-envnpm install --save @babel/polyfill
+
+在项目的根目录下创建一个命名为 babel.config.js 的配置文件默认配置：
+123456789101112131415const presets = [  [   ...
+    
+
+        <a href="/2019/08/12/studyNotes/2019-08-12-notes/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/babel/">babel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-studyNotes-vue/起步"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-08-06 00:00:00" datetime="2019-08-05T16:00:00.000Z"  itemprop="datePublished">2019-08-06</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Vue学习笔记/">Vue学习笔记</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/08/06/studyNotes-vue/起步/">Vue学习笔记——起步</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        项目搭建（使用vue-cli webpack）123$ yarn global add webpack  $ yarn global add vue-cli$ vue init webpack
+
+vue init webpack 运行结果：安装完成如下：然后运行$ npm run dev访问http://localhost:8081，得到如下页面：至此，项目搭建完成！
+
+    
+
+        <a href="/2019/08/06/studyNotes-vue/起步/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-randomNotes/2019-03-20-Untitled"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-03-20 00:00:00" datetime="2019-03-19T16:00:00.000Z"  itemprop="datePublished">2019-03-20</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/随拾/">随拾</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/03/20/randomNotes/2019-03-20-Untitled/">chrome和安卓手机浏览器不显示input radio样式的解决办法</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        chrome和安卓手机浏览器不显示input radio样式的解决办法input radio单选在安卓手机浏览器和chrome上不显示，无法点击、选中。这是由于webkit浏览器的input默认样式导致的。找到关于input的相关css，注释掉：
+1input &#123; -webkit-appearance:none &#125;
+
+关于-webkit-appearance，相关wiki...
+    
+
+        <a href="/2019/03/20/randomNotes/2019-03-20-Untitled/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="blog-studyNotes/2019-02-14-notes"
+  class="article-card article-type-blog" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-02-14 00:00:00" datetime="2019-02-13T16:00:00.000Z"  itemprop="datePublished">2019-02-14</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/学习笔记/">学习笔记</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/02/14/studyNotes/2019-02-14-notes/">苹果手机和安卓手机对于new Date()处理的一个小bug</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        苹果手机和安卓手机对于new Date()处理的一个小bug1234567891011121314151617alert(new Date('2019-02-14'))  //iphone:  Thu Feb 14 2019 08:00:00 GMT+0800(CST)alert(new Date('2019-02-14'))  //Android: Thu Feb 14 2019 08:0...
+    
+
+        <a href="/2019/02/14/studyNotes/2019-02-14-notes/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/date/">date</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/时间格式化/">时间格式化</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+    </ul>
+
+    
+<nav id="page-nav">
+    <div class="inner">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
     </div>
 </nav>
 
+
 </div>
-    </header>
 
-    
-
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-            
-
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/22/studyNotes/2020-01-22-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/01/22/studyNotes/2020-01-22-notes/" class="post-title-link" itemprop="url">Nginx配置反向代理并重写URL</a>
-              
-            
-          </h1>
+        <footer class="footer">
+    <div class="top">
         
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-01-22 00:00:00 / 修改时间：13:09:21" itemprop="dateCreated datePublished" datetime="2020-01-22T00:00:00+08:00">2020-01-22</time>
-            </span>
-          
+        <p>
             
-
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
             
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h4 id="nginx-conf"><a href="#nginx-conf" class="headerlink" title="nginx.conf"></a>nginx.conf</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># ...</span><br><span class="line">location /api &#123;</span><br><span class="line">  rewrite /api/(.+)$ /$1 break;</span><br><span class="line">  proxy_pass http://localhost:3000 ;</span><br><span class="line">  proxy_redirect off;</span><br><span class="line">&#125;</span><br><span class="line"># ...</span><br></pre></td></tr></table></figure>
-
-<p>访问：<code>http://localhost/api</code>，会代理到<code>http://localhost:3000</code>，<code>http://localhost:3000</code>路由中无需额外写/api，nginx会自动重写。</p>
-
-          
-        
-      
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
     </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/17/studyNotes/2020-01-17-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
+    <div class="bottom">
+        <p><span>Loneyclown &copy; 2020</span>
+            <span>
                 
-                
-                <a href="/2020/01/17/studyNotes/2020-01-17-notes/" class="post-title-link" itemprop="url">MAC系统Nginx安装与操作</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-01-17 00:00:00 / 修改时间：11:35:52" itemprop="dateCreated datePublished" datetime="2020-01-17T00:00:00+08:00">2020-01-17</time>
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
             </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="安装Command-Line-tools"><a href="#安装Command-Line-tools" class="headerlink" title="安装Command Line tools"></a>安装Command Line tools</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装brew命令"><a href="#安装brew命令" class="headerlink" title="安装brew命令"></a>安装brew命令</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nginx</span><br></pre></td></tr></table></figure>
-
-<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx</span><br></pre></td></tr></table></figure>
-
-<p>若提示命令不存在，则找到nginx可执行文件，比如：<code>/usr/local/bin/nginx</code><br>寻找nginx可执行文件可使用命令<code>find / -iname &quot;nginx&quot;</code>，一般bin目录下的nginx就是可执行文件<br>找到后，进入目录，执行：  </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./nginx</span><br></pre></td></tr></table></figure>
-
-<h4 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -s reload</span><br></pre></td></tr></table></figure>
-
-<p>提示找不到命令解决方法同启动</p>
-<h4 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h4><h5 id="查询Nginx主线程"><a href="#查询Nginx主线程" class="headerlink" title="查询Nginx主线程"></a>查询Nginx主线程</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -el|grep nginx</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://i.postimg.cc/RhZ9DmPY/2020-10-17-img-01.png" alt="01"></p>
-<h5 id="正常停止"><a href="#正常停止" class="headerlink" title="正常停止"></a>正常停止</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo kill -QUIT 进程号</span><br></pre></td></tr></table></figure>
-
-<h5 id="快速停止"><a href="#快速停止" class="headerlink" title="快速停止"></a>快速停止</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo kill -TERM 进程号</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="配置文件目录"><a href="#配置文件目录" class="headerlink" title="配置文件目录"></a>配置文件目录</h4><p>一般情况下，通过brew命令安装的nginx，配置文件目录在<code>/usr/local/etc/nginx/</code><br>若找不到上述目录，可以直接全局查找配置文件所在目录：<code>find / -iname &quot;nginx.conf&quot;</code><br>相关配置自行百度</p>
-<h4 id="查看配置文件是否正确"><a href="#查看配置文件是否正确" class="headerlink" title="查看配置文件是否正确"></a>查看配置文件是否正确</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -t</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
-
-<p>出现如下结果说明配置文件正确：<br><img src="https://i.postimg.cc/9Fv5GyjK/2020-10-17-img-02.jpg" alt="02"></p>
-
-          
-        
-      
+        </p>
     </div>
+</footer>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/27/studyNotes/2019-11-27-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/11/27/studyNotes/2019-11-27-notes/" class="post-title-link" itemprop="url">关于MAC系统上向日葵等“流氓”软件的开机自启dis</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-11-27 00:00:00" itemprop="dateCreated datePublished" datetime="2019-11-27T00:00:00+08:00">2019-11-27</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-12-25 11:50:55" itemprop="dateModified" datetime="2019-12-25T11:50:55+08:00">2019-12-25</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h5 id="题记"><a href="#题记" class="headerlink" title="题记"></a>题记</h5><p>因为近期teamviewer遭到入侵，所以对于远控软件不得不重新选择。然后就入了向日葵的坑了…然后我就各种baidu、google，最后总算是战胜了“流氓”。  </p>
-<h2 id="MAC管理开机自启的两种方式"><a href="#MAC管理开机自启的两种方式" class="headerlink" title="MAC管理开机自启的两种方式"></a>MAC管理开机自启的两种方式</h2><h4 id="系统偏好设置里的开机自启（登录项-LoginItem）"><a href="#系统偏好设置里的开机自启（登录项-LoginItem）" class="headerlink" title="系统偏好设置里的开机自启（登录项/LoginItem）"></a>系统偏好设置里的开机自启（登录项/LoginItem）</h4><p>这种方式最简单直观<br><img src="https://i.postimg.cc/Qx38BZKR/2019-11-27-img-01.jpg" alt><br><img src="https://i.postimg.cc/BQBqH7xt/2019-11-27-img-02.jpg" alt></p>
-<h4 id="通过plist文件管理开机自启"><a href="#通过plist文件管理开机自启" class="headerlink" title="通过plist文件管理开机自启"></a>通过plist文件管理开机自启</h4><p>MAC分别有6个目录存放了开启自启的plist文件</p>
-<blockquote>
-<p>Library/Preferences/ – （当前用户设置的进程）<br>~/Library/LaunchAgents/ – （当前用户的守护进程）<br>/Library/LaunchAgents/ – （管理员设置的用户进程）<br>/Library/LaunchDaemons/ – （管理员提供的系统守护进程）<br>/System/Library/LaunchAgents/ – （系统提供的用户进程）<br>/System/Library/LaunchDaemons/ – （系统提供的系统守护进程）</p>
-</blockquote>
-<p>这里以向日葵为例，安装了向日葵客户端和控制端后，分别在<code>/Library/LaunchAgents/</code>、<code>/Library/LaunchDaemons/</code>目录生成了4个plist文件：<br>打开终端，输入：</p>
-<pre><code class="shell">open /Library/LaunchAgents</code></pre>
-<p><img src="https://i.postimg.cc/bNN5Vm7Z/2019-11-27-img-03.jpg" alt><br>使用任意文本编辑器编辑<code>com.oray.sunlogin.agent.plist</code>、<code>com.oray.sunlogin.startup.plist</code>两个文件，将Disabled改为true，将RunAtLoad改为false：<br><img src="https://i.postimg.cc/XYtDJ4p5/2019-11-27-img-04.jpg" alt><br><img src="https://i.postimg.cc/43t2Hq9S/2019-11-27-img-05.jpg" alt><br>打开终端，输入：</p>
-<pre><code class="shell">open /Library/LaunchDaemons</code></pre>
-<p><img src="https://i.postimg.cc/mZVX9QPB/2019-11-27-img-06.jpg" alt><br>编辑<code>com.oray.sunlogin.helper.plist</code>、<code>com.oray.sunlogin.plist</code>文件，将Disabled改为true，将RunAtLoad改为false：<br><img src="https://i.postimg.cc/FsBTWNb6/2019-11-27-img-07.jpg" alt><br><img src="https://i.postimg.cc/653HfyZR/2019-11-27-img-08.jpg" alt></p>
-<p>这样，下次开机，向日葵便不会自启了。</p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/12/studyNotes/2019-10-12-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/10/12/studyNotes/2019-10-12-notes/" class="post-title-link" itemprop="url">SVN命令行相关操作</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-12 00:00:00 / 修改时间：09:45:10" itemprop="dateCreated datePublished" datetime="2019-10-12T00:00:00+08:00">2019-10-12</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h2 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h2><h3 id="将数据导入存储库"><a href="#将数据导入存储库" class="headerlink" title="将数据导入存储库"></a>将数据导入存储库</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> svn import https://svn.example.com/repos/MyRepo/MyProject/trunk -m "Initial project import"</span><br></pre></td></tr></table></figure>
-
-<h3 id="签出工作副本"><a href="#签出工作副本" class="headerlink" title="签出工作副本"></a>签出工作副本</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> svn checkout https://svn.example.com/repos/MyRepo/MyProject/trunk MyWorkingCopy</span><br></pre></td></tr></table></figure>
-
-<h3 id="更新工作副本"><a href="#更新工作副本" class="headerlink" title="更新工作副本"></a>更新工作副本</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> svn update</span><br></pre></td></tr></table></figure>
-
-<h3 id="在本地工作副本中进行更改"><a href="#在本地工作副本中进行更改" class="headerlink" title="在本地工作副本中进行更改"></a>在本地工作副本中进行更改</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> svn commit -m "My Descriptive Log Message"</span><br></pre></td></tr></table></figure>
-
-<h3 id="执行文件和目录操作"><a href="#执行文件和目录操作" class="headerlink" title="执行文件和目录操作"></a>执行文件和目录操作</h3><h5 id="添加新文件和目录"><a href="#添加新文件和目录" class="headerlink" title="添加新文件和目录"></a>添加新文件和目录</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> svn add foo.cs</span><br></pre></td></tr></table></figure>
-
-<h5 id="复制文件和目录"><a href="#复制文件和目录" class="headerlink" title="复制文件和目录"></a>复制文件和目录</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> svn copy foo.cs bar.cs</span><br></pre></td></tr></table></figure>
-
-<h5 id="删除文件和目录"><a href="#删除文件和目录" class="headerlink" title="删除文件和目录"></a>删除文件和目录</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> svn delete foo.cs</span><br></pre></td></tr></table></figure>
-
-<h5 id="恢复或放弃本地更改"><a href="#恢复或放弃本地更改" class="headerlink" title="恢复或放弃本地更改"></a>恢复或放弃本地更改</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> svn revert foo.cs</span><br></pre></td></tr></table></figure>
-
-<h3 id="分支和标记"><a href="#分支和标记" class="headerlink" title="分支和标记"></a>分支和标记</h3><p>您应该使用<code>svn copy</code>命令创建分支和标签。当您希望项目与历史记录相关时，这是用于复制项目和存储库中项目的命令。<br><code>svn copy</code>命令用于分支，因为从技术上讲branch是复制源的副本。但是，它不是在本地文件系统上复制文件时所熟悉的普通副本。Subversion存储库中的分支称为“便宜副本”，类似于符号链接。因此，创建新分支将花费最少的时间来完成，并且在Subversion存储库中几乎不占用空间。您可以创建分支并将其用于所需的任何更改，而不考虑更改的大小和范围。</p>
-<h5 id="使用直接URL到URL复制创建分支"><a href="#使用直接URL到URL复制创建分支" class="headerlink" title="使用直接URL到URL复制创建分支"></a>使用直接URL到URL复制创建分支</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> svn copy https://example.com/MyRepo/trunk https://example.com/MyRepo/branches/MyNewBranch -m "Creating a new branch"</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p><em>参阅官方文档：<a href="http://subversion.apache.org/quick-start" target="_blank" rel="noopener">http://subversion.apache.org/quick-start</a></em></p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/30/studyNotes/2019-08-30-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/30/studyNotes/2019-08-30-notes/" class="post-title-link" itemprop="url">无序json排序</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-30 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-30T00:00:00+08:00">2019-08-30</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-12 09:43:11" itemprop="dateModified" datetime="2019-10-12T09:43:11+08:00">2019-10-12</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <p>代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> data = &#123;</span><br><span class="line">  L1: [<span class="number">1</span>,<span class="number">12</span>,<span class="number">5</span>,<span class="string">"L1"</span>],</span><br><span class="line">  B1: [<span class="number">1</span>,<span class="number">12</span>,<span class="number">5</span>,<span class="string">"B1"</span>],</span><br><span class="line">  L3: [<span class="number">1</span>,<span class="number">12</span>,<span class="number">5</span>,<span class="string">"L3"</span>],</span><br><span class="line">  L2: [<span class="number">1</span>,<span class="number">12</span>,<span class="number">5</span>,<span class="string">"L2"</span>]</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> arr1 = [], arr2 = [];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">in</span> data) &#123;</span><br><span class="line">  arr1.push(i);</span><br><span class="line">&#125;</span><br><span class="line">arr1.sort();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i <span class="keyword">in</span> arr1) &#123;</span><br><span class="line">  arr2.push(data[arr1[i]]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(arr2);</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[ [ 1, 12, 5, &apos;B1&apos; ],</span><br><span class="line">  [ 1, 12, 5, &apos;L1&apos; ],</span><br><span class="line">  [ 1, 12, 5, &apos;L2&apos; ],</span><br><span class="line">  [ 1, 12, 5, &apos;L3&apos; ] ]</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/studyNotes/2019-08-12-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/12/studyNotes/2019-08-12-notes/" class="post-title-link" itemprop="url">传统web项目配置babel@7自动兼容ES6语法</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-12 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-12T00:00:00+08:00">2019-08-12</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-12 09:43:11" itemprop="dateModified" datetime="2019-10-12T09:43:11+08:00">2019-10-12</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h3 id="安装babel-7"><a href="#安装babel-7" class="headerlink" title="安装babel@7"></a>安装babel@7</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev @babel/core @babel/cli @babel/preset-env</span><br><span class="line">npm install --save @babel/polyfill</span><br></pre></td></tr></table></figure>
-
-<h3 id="在项目的根目录下创建一个命名为-babel-config-js-的配置文件"><a href="#在项目的根目录下创建一个命名为-babel-config-js-的配置文件" class="headerlink" title="在项目的根目录下创建一个命名为 babel.config.js 的配置文件"></a>在项目的根目录下创建一个命名为 babel.config.js 的配置文件</h3><p>默认配置：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> presets = [</span><br><span class="line">  [</span><br><span class="line">    <span class="string">"@babel/env"</span>,</span><br><span class="line">    &#123;</span><br><span class="line">      targets: &#123;</span><br><span class="line">        edge: <span class="string">"17"</span>,</span><br><span class="line">        firefox: <span class="string">"60"</span>,</span><br><span class="line">        chrome: <span class="string">"67"</span>,</span><br><span class="line">        safari: <span class="string">"11.1"</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      useBuiltIns: <span class="string">"usage"</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  ],</span><br><span class="line">];</span><br><span class="line"><span class="built_in">module</span>.exports = &#123; presets &#125;;</span><br></pre></td></tr></table></figure>
-
-<p>支持市场份额超过5%的浏览器：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"targets"</span>: &#123;</span><br><span class="line">  <span class="string">"browsers"</span>: <span class="string">"&gt; 5%"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>支持最后两个版本的浏览器以及IE7+：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"targets"</span>: &#123;</span><br><span class="line">   <span class="string">"browsers"</span>: [<span class="string">"last 2 versions"</span>, <span class="string">"ie &gt;= 7"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="监听转化"><a href="#监听转化" class="headerlink" title="监听转化"></a>监听转化</h3><p>在需要转化的文件目录执行：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx babel --presets=@babel/env --root-mode upward shangpu_list_map.js --watch --out-file shangpu_list_map.min.js</span><br></pre></td></tr></table></figure>
-
-<p><em>PS：若提示命令不存在，请全局安装babel-cli</em></p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/06/studyNotes-vue/起步/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/08/06/studyNotes-vue/起步/" class="post-title-link" itemprop="url">Vue学习笔记——起步</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-06 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-06T00:00:00+08:00">2019-08-06</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-12 09:43:11" itemprop="dateModified" datetime="2019-10-12T09:43:11+08:00">2019-10-12</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue学习笔记/" itemprop="url" rel="index"><span itemprop="name">Vue学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="项目搭建（使用vue-cli-webpack）"><a href="#项目搭建（使用vue-cli-webpack）" class="headerlink" title="项目搭建（使用vue-cli webpack）"></a>项目搭建（使用vue-cli webpack）</h1><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ yarn global add webpack  </span><br><span class="line">$ yarn global add vue-cli</span><br><span class="line">$ vue init webpack</span><br></pre></td></tr></table></figure>
-
-<p>vue init webpack 运行结果：<br><img src="https://i.postimg.cc/SN6NNL0Y/2019-08-06-img-01.png" alt><br>安装完成如下：<br><img src="https://i.postimg.cc/SN6NNL0Y/2019-08-06-img-02.png" alt><br>然后运行<code>$ npm run dev</code><br>访问<a href="http://localhost:8081" target="_blank" rel="noopener">http://localhost:8081</a>，得到如下页面：<br><img src="https://i.postimg.cc/SN6NNL0Y/2019-08-06-img-03.png" alt><br>至此，项目搭建完成！</p>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/20/randomNotes/2019-03-20-Untitled/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/20/randomNotes/2019-03-20-Untitled/" class="post-title-link" itemprop="url">chrome和安卓手机浏览器不显示input radio样式的解决办法</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-03-20 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-20T00:00:00+08:00">2019-03-20</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-12 09:43:11" itemprop="dateModified" datetime="2019-10-12T09:43:11+08:00">2019-10-12</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随拾/" itemprop="url" rel="index"><span itemprop="name">随拾</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="chrome和安卓手机浏览器不显示input-radio样式的解决办法"><a href="#chrome和安卓手机浏览器不显示input-radio样式的解决办法" class="headerlink" title="chrome和安卓手机浏览器不显示input radio样式的解决办法"></a>chrome和安卓手机浏览器不显示input radio样式的解决办法</h1><p>input radio单选在安卓手机浏览器和chrome上不显示，无法点击、选中。<br>这是由于webkit浏览器的input默认样式导致的。找到关于input的相关css，注释掉：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span> &#123; <span class="attribute">-webkit-appearance</span>:none &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="关于-webkit-appearance，相关wiki是这么说的"><a href="#关于-webkit-appearance，相关wiki是这么说的" class="headerlink" title="关于-webkit-appearance，相关wiki是这么说的"></a>关于<code>-webkit-appearance</code>，相关wiki是这么说的</h2><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>改变按钮和其他控件的外观，使其类似于原生控件。</p>
-<ul>
-<li>-webkit-appearance 是一个 不规范的属性（unsupported WebKit property），它没有出现在 CSS 规范草案中。</li>
-<li>此属性非标准且渲染效果在不同浏览器下不同，有些属性值甚至不支持|，请慎用。<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-appearance：none | button | button-bevel ....</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>默认值：none</p>
-<h3 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h3><p>对应的firefox可以使用 -moz-appearance属性iOS 2.0及更高版本的Safari浏览器可用Android尚不明确</p>
-<h3 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h3><table>
-<thead>
-<tr>
-<th>-webkit-appearance取值</th>
-<th>介绍</th>
-<th>Chrome</th>
-<th>Safari</th>
-<th>iOS Safari</th>
-<th>Android Browser</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>none</td>
-<td>去除系统默认appearance的样式,<strong>常用于IOS下移除原生样式</strong></td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>button</td>
-<td>渲染成button的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>button-bevel</td>
-<td>渲染成button-bevel的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>caret</td>
-<td>渲染成caret的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>checkbox</td>
-<td>渲染input:checkbox样式的复选框按钮</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>listbox</td>
-<td>渲染为listbox样式的复选框按钮</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>listitem</td>
-<td>渲染成listitem的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>media-fullscreen-button</td>
-<td>渲染成media-fullscreen-button的风格</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>media-mute-button</td>
-<td>渲染成media-mute-button的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>media-seek-back-button</td>
-<td>渲染成media-seek-back-button的风格</td>
-<td>不支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>media-seek-forward-button</td>
-<td>渲染成media-seek-forward-button的风格</td>
-<td>不支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>media-slider</td>
-<td>渲染成media-slider的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>media-sliderthumb</td>
-<td>渲染成media-sliderthumb的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>menulist</td>
-<td>渲染成menulist的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>menulist-button</td>
-<td>渲染成menulist-button的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>menulist-text</td>
-<td>渲染成menulist-text的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>menulist-textfield</td>
-<td>渲染成menulist-textfield的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>push-button</td>
-<td>渲染成push-button的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>radio</td>
-<td>渲染成radio的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>searchfield</td>
-<td>渲染成searchfield的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>searchfield-cancel-button</td>
-<td>渲染成searchfield-cancel-button的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>searchfield-decoration</td>
-<td>渲染成searchfield-decoration的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>searchfield-results-button</td>
-<td>渲染成searchfield-results-button的风格</td>
-<td>不支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>searchfield-results-decoration</td>
-<td>渲染成searchfield-results-decoration的风格</td>
-<td>不支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>slider-horizontal</td>
-<td>渲染成slider-horizontal的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>slider-vertical</td>
-<td>渲染成slider-horizontal的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>sliderthumb-horizontal</td>
-<td>渲染成sliderthumb-horizontal的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>sliderthumb-vertical</td>
-<td>渲染成sliderthumb-vertical的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>square-button</td>
-<td>渲染成square-button的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>textarea</td>
-<td>渲染成textarea的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>textfield</td>
-<td>渲染成textfield的风格</td>
-<td>支持</td>
-<td>支持</td>
-<td>不支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td>scrollbarbutton-down</td>
-<td>渲染成scrollbarbutton-down的风格</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>scrollbarbutton-left</td>
-<td>渲染成scrollbarbutton-left的风格</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>scrollbarbutton-right</td>
-<td>渲染成scrollbarbutton-right的风格</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>scrollbargripper-horizontal</td>
-<td>渲染成scrollbargripper-horizontal的风格</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>scrollbargripper-vertical</td>
-<td>渲染成scrollbargripper-vertical的风格</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>scrollbarthumb-horizontal</td>
-<td>渲染成scrollbarthumb-horizontal的风格</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>scrollbarthumb-vertical</td>
-<td>渲染成scrollbarthumb-vertical的风格</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>scrollbartrack-horizontal</td>
-<td>渲染成scrollbartrack-horizontal的风格</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td>scrollbartrack-vertical</td>
-<td>渲染成scrollbartrack-horizontal的风格</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-<td>不支持</td>
-</tr>
-</tbody></table>
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/14/studyNotes/2019-02-14-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/14/studyNotes/2019-02-14-notes/" class="post-title-link" itemprop="url">苹果手机和安卓手机对于new Date()处理的一个小bug</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-14 00:00:00" itemprop="dateCreated datePublished" datetime="2019-02-14T00:00:00+08:00">2019-02-14</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-01-16 14:02:22" itemprop="dateModified" datetime="2020-01-16T14:02:22+08:00">2020-01-16</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/学习笔记/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h2 id="苹果手机和安卓手机对于new-Date-处理的一个小bug"><a href="#苹果手机和安卓手机对于new-Date-处理的一个小bug" class="headerlink" title="苹果手机和安卓手机对于new Date()处理的一个小bug"></a>苹果手机和安卓手机对于new Date()处理的一个小bug</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-02-14'</span>))  <span class="comment">//iphone:  Thu Feb 14 2019 08:00:00 GMT+0800(CST)</span></span><br><span class="line">alert(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-02-14'</span>))  <span class="comment">//Android: Thu Feb 14 2019 08:00:00 GMT+0800(CST)</span></span><br><span class="line"></span><br><span class="line">alert(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-02-14 11:00:05'</span>))  <span class="comment">//iphone: Invalid Date</span></span><br><span class="line">alert(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-02-14 11:00:05'</span>))  <span class="comment">//Android: Thu Feb 14 2019 11:00:05 GMT+0800(CST)</span></span><br><span class="line"></span><br><span class="line">alert(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-02-14 11:00:05.0'</span>))  <span class="comment">//iphone: Invalid Date</span></span><br><span class="line">alert(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019-02-14 11:00:05.0'</span>))  <span class="comment">//Android: Thu Feb 14 2019 11:00:05 GMT+0800(CST)</span></span><br><span class="line"></span><br><span class="line">alert(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019/02/14'</span>))  <span class="comment">//iphone:  Thu Feb 14 2019 08:00:00 GMT+0800(CST)</span></span><br><span class="line">alert(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019/02/14'</span>))  <span class="comment">//Android: Thu Feb 14 2019 08:00:00 GMT+0800(CST)</span></span><br><span class="line"></span><br><span class="line">alert(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019/02/14 11:00:05'</span>))  <span class="comment">//iphone:  Thu Feb 14 2019 11:00:05 GMT+0800(CST)</span></span><br><span class="line">alert(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019/02/14 11:00:05'</span>))  <span class="comment">//Android: Thu Feb 14 2019 11:00:05 GMT+0800(CST)</span></span><br><span class="line"></span><br><span class="line">alert(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019/02/14 11:00:05.0'</span>))  <span class="comment">//iphone:  Invalid Date</span></span><br><span class="line">alert(<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">'2019/02/14 11:00:05.0'</span>))  <span class="comment">//Android: Thu Feb 14 2019 11:00:05 GMT+0800(CST)</span></span><br></pre></td></tr></table></figure>
-
-<p>可以看到，对于格式化<code>yyyy-mm-dd</code>格式，苹果和安卓的结果都是正常的，而只要日期后面加上时分秒苹果就会输出异常。<br>而对于<code>yyyy/mm/dd</code>格式，不管加不加时分秒，苹果和安卓都是正常，但是加上毫秒（因为有些数据库的时间格式默认到了毫秒）后苹果又会异常。</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><h4 id="对于没有精确到毫秒的时间使用正则替换“-”为“-”"><a href="#对于没有精确到毫秒的时间使用正则替换“-”为“-”" class="headerlink" title="对于没有精确到毫秒的时间使用正则替换“-”为“/”"></a>对于没有精确到毫秒的时间使用正则替换“-”为“/”</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatIOS</span>(<span class="params">date</span>) </span>&#123;</span><br><span class="line">  retuen <span class="keyword">new</span> <span class="built_in">Date</span>(date.replace(<span class="regexp">/-/g</span>, <span class="string">"/"</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="对于精确到了毫秒的时间只能舍弃毫秒而截取前面19位了"><a href="#对于精确到了毫秒的时间只能舍弃毫秒而截取前面19位了" class="headerlink" title="对于精确到了毫秒的时间只能舍弃毫秒而截取前面19位了"></a>对于精确到了毫秒的时间只能舍弃毫秒而截取前面19位了</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatIOS</span>(<span class="params">date</span>) </span>&#123;</span><br><span class="line">  retuen date.substr(<span class="number">0</span>, <span class="number">19</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/29/essays/2019-01-29-essays/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Loneyclown">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Loneyclown">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/01/29/essays/2019-01-29-essays/" class="post-title-link" itemprop="url">火影忍者疾风传OP《青鸟》</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-01-29 00:00:00" itemprop="dateCreated datePublished" datetime="2019-01-29T00:00:00+08:00">2019-01-29</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-10-12 09:43:11" itemprop="dateModified" datetime="2019-10-12T09:43:11+08:00">2019-10-12</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/随笔/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          <br>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-            <h1 id="《青鸟》（《ブルーバード》）"><a href="#《青鸟》（《ブルーバード》）" class="headerlink" title="《青鸟》（《ブルーバード》）"></a>《青鸟》（《ブルーバード》）</h1><p>作曲：水野良樹<br>作词：水野良樹<br>演唱：いきものがかり（生物股长）</p>
-<h2 id="歌词正文"><a href="#歌词正文" class="headerlink" title="歌词正文"></a>歌词正文</h2><ul>
-<li><p>飞翔（はばた）いたら もとらないと言（い）って<br><strong>habata i tara motorana i to ii te</strong><br><em>当展翅飞翔之际 请下定决心不再回头</em>  </p>
-</li>
-<li><p>目指（めざ）したのは 苍（あおい）苍（あおい）あの空（そら）<br><strong>mezashitanowa a o i a o i anosora</strong><br><em>我们向往的目标 是那湛蓝湛蓝的天空</em>  </p>
-</li>
-<li><p>“悲（かな）しみ”はまだおぼえられず<br><strong>kanashimi wamada o bo e rarezu</strong><br><em>不曾真正理解”悲伤”的滋味</em>  </p>
-</li>
-<li><p>“切（せつ）なさ”は今（いま）つかみはじめた<br><strong>setsunasawa i matsukamihajimeta</strong><br><em>却已开始探索”痛苦”的含义</em>  </p>
-</li>
-<li><p>あなたへと抱（いだ）く この感情（かんじょう）も<br><strong>manataheto i daku konokannjyo u mo</strong><br><em>就连心中这份对你的感情</em>  </p>
-</li>
-<li><p>今（いま）“言叶（ことば）”にかわっていく<br><strong>i makotobanikawate i ku</strong><br><em>如今也即将渐渐凝聚成”话语”</em>  </p>
-</li>
-<li><p>未知（みち）なる世界（せかい）の 游迷（ゆめ）からめざめて<br><strong>michinaru sekaino yumekara mezamete</strong><br><em>从对未知世界的痴迷中豁然觉醒</em>  </p>
-</li>
-<li><p>この羽根（はね）をひろげ 飞（と）び立（た）つ<br><strong>konohanewohiroge tobitatsu</strong><br><em>舒展双翅 飞向八篇广阔的天空</em>  </p>
-</li>
-<li><p>飞翔（はばた）いたら もとらないと言（い）って<br><strong>habata i tara motorana i to i te</strong><br><em>当展翅飞翔之际 请下定决心不再回头</em>  </p>
-</li>
-<li><p>目指（めざ）したのは 白（しろ）い 白（しろ）いあの云（くも）<br><strong>mezashitanowa shiroi shiroi anokumo</strong><br><em>我们飞往的方向 是那雪白雪白的流云</em>  </p>
-</li>
-<li><p>突（つ）き拔（ぬ）けたら みつかると知（し)って<br><strong>tsukinuketara mitsukarutoshiite</strong><br><em>当冲破云层之时 你便会知晓梦之所在</em>  </p>
-</li>
-<li><p>振（ふ）り切（き）るほど 苍（あお）い 苍（あお）いあの空（そら）<br><strong>hurikiruhodo a o i a o i a nosora</strong><br><em>挣脱一切的来源 飞向那片湛蓝的天空</em>  </p>
-</li>
-<li><p>苍（あお)い苍（あお）いあの空（そら）<br><strong>a o i a o i a nosora</strong><br><em>那片湛蓝湛蓝的天空</em>  </p>
-</li>
-<li><p>苍（あお)い苍（あお）いあの空（そら<br><strong>a o i a o i a nosora</strong><br><em>那片湛蓝湛蓝的天空</em>  </p>
-</li>
-<li><p>爱想（あいそ）つきたような音（おとで）<br><strong>aisotsukitayounaotode</strong><br><em>随着一声仿佛诉说厌倦的声响</em>  </p>
-</li>
-<li><p>さびれた古（ふる）いまぢは坏（こわ）れた<br><strong>sabiretahurui mazawakowareta</strong><br><em>早已腐锈的陈旧门栓哐当落地</em>  </p>
-</li>
-<li><p>见饱（みめ）きたカゴは ほら拾（す）ててうく<br><strong>mimekitakagowa horasutete u ku</strong><br><em>让我们舍弃这早已看够的鸟笼</em>  </p>
-</li>
-<li><p>振（ふ）り返（かえ）ることはもうない<br><strong>hurika e rukotowamo u nai</strong><br><em>从此以后再也不必回头</em>  </p>
-</li>
-<li><p>高鸣（たかな）る鼓动（こどう）に呼吸（こきゅ）を共鸣（あつ）けて<br><strong>takanaru kodo u ni kokyuo atsukete</strong><br><em>让呼吸与高昂的心跳声一同鸣响</em>  </p>
-</li>
-<li><p>このまどを蹴（け）って 飞（と）び立（た）つ<br><strong>konomado o kete tobitatsu</strong><br><em>舒展双翅飞离这个囚禁的牢笼</em>  </p>
-</li>
-<li><p>かけ出（だ）したら 手（て）にできると言（い）って<br><strong>kakedashitara tenidekiruto i te</strong><br><em>当迈出步伐之际 请相信有志者事竟成</em>  </p>
-</li>
-<li><p>いざなうのは 远（とお）い远（とお）いあのこえ<br><strong>i zana u nowa to o i to o i a no koe</strong><br><em>遥远彼方的呼唤 那是在邀请我们前往</em>  </p>
-</li>
-<li><p>眩（まぶ）しすぎた あなたの手（て）も握（にぎ）って<br><strong>mabushisugita a natano temonigite</strong><br><em>面对刺眼的阳光 我愿紧紧握住你的手</em>  </p>
-</li>
-<li><p>求（もと）めるほど 苍（あお）い苍（あお）いあの空（そら）<br><strong>motomeruhodo a o i a o i a nosora</strong><br><em>跟随心中的渴求 飞翔那片湛蓝的天空</em>  </p>
-</li>
-<li><p>坠（お）ちていくと わかっていた<br><strong>o chite i kuto wakaate i ta</strong><br><em>早已明白 我们终有一天会从蓝天坠落</em>  </p>
-</li>
-<li><p>それでも光（ひかり）を追（お）いつづけていくよ<br><strong>soredemo hikario o i tsuduketeikuyo</strong><br><em>尽管如此 我也要继续追寻光芒的所在</em>  </p>
-</li>
-<li><p>飞翔（はばた）いたら もぢれないと言（い)って<br><strong>habata i tara mozarena i to ii te</strong><br><em>当展翅飞翔之际 请你明白已无法回头</em>  </p>
-</li>
-<li><p>探（さが）したのは 白（しろ）い白（しろ）いあの云（くも）<br><strong>zagashitanowa shiro i shiro i a nokumo</strong><br><em>我们寻觅的目标 是那雪白雪白的流云</em>  </p>
-</li>
-<li><p>突（つ）き拔（ぬ）けたら みつかると知（し)って<br><strong>tsukiunketara mitsukarotoshiite</strong><br><em>当冲破云层之时 你便会知晓梦之所在</em>  </p>
-</li>
-<li><p>振（ふ）り切（き）るほど 苍（あお）い 苍（あお）いあの空（そら）<br><strong>hurikirohodo a o i a o i a nosora</strong><br><em>愿挣脱一切束缚 飞向那片湛蓝的天空</em>  </p>
-</li>
-<li><p>苍（あお)い苍（あお）いあの空（そら）<br><strong>a o i a o i a nosora</strong><br><em>那片湛蓝湛蓝的天空</em>  </p>
-</li>
-<li><p>苍（あお)い苍（あお）いあの空（そら)<br><strong>a o i a o i a nosora</strong><br><em>那片湛蓝湛蓝的天空</em>  </p>
-</li>
-</ul>
-<h2 id="歌曲相关链接"><a href="#歌曲相关链接" class="headerlink" title="歌曲相关链接"></a>歌曲相关链接</h2><p><em>某云：<a href="https://music.163.com/#/song?id=718765" data-hover="《ブルーバード》" target="_blank" rel="noopener">《ブルーバード》</a></em><br><em>中文版本：<a href="https://www.bilibili.com/video/av35904542" data-hover="陈乐一 火影主题曲《青鸟》" target="_blank" rel="noopener">陈乐一 火影主题曲《青鸟》</a></em>  </p>
-<!-- _某云：[《ブルーバード》](https://music.163.com/#/song?id=718765)_  
-_中文版本：[陈乐一 火影主题曲《青鸟》](https://www.bilibili.com/video/av35904542)_   -->
-          
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-          </div>
-          
-
-        </div>
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image"
-      src="/images/avatar.jpg"
-      alt="Loneyclown">
-  <p class="site-author-name" itemprop="name">Loneyclown</p>
-  <div class="site-description motion-element" itemprop="description"></div>
-</div>
-  <nav class="site-state motion-element">
-      <div class="site-state-item site-state-posts">
-        
-          <a href="/archives">
-        
-          <span class="site-state-item-count">26</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-categories">
-        
-          
-            <a href="/categories/">
-          
-        
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">分类</span>
-        </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-tags">
-        
-          
-            <a href="/tags/">
-          
-        
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">36</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
-      </div>
-    
-  </nav>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-      
-      
-        
-      
-      
-        
-      
-        <a href="https://github.com/loneyclown" title="GitHub &rarr; https://github.com/loneyclown" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-    
-  </div>
-
-
-
-        </div>
-      </div>
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
     </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Loneyclown</span>
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.3.0</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
 
-        
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
-
-    
-
-  </div>
-
-  
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  <script src="/js/utils.js?v=7.3.0"></script>
-  <script src="/js/motion.js?v=7.3.0"></script>
-
-  
-  <script src="/js/affix.js?v=7.3.0"></script>
-  <script src="/js/schemes/pisces.js?v=7.3.0"></script>
-
-
-
-  
-
-  <script src="/js/next-boot.js?v=7.3.0"></script>
-
-  
-
-  
-
-  
-
-
-  
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
 
 
 
@@ -2052,33 +713,22 @@ _中文版本：[陈乐一 火影主题曲《青鸟》](https://www.bilibili.com
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.3.0"></script>
-
-
-
-
-
-
-
-
-
-
-
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
 
 
 
