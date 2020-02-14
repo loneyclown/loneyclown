@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://loneyclown.github.io/"/>
-  <updated>2020-02-10T09:21:51.862Z</updated>
+  <updated>2020-02-14T13:58:09.776Z</updated>
   <id>https://loneyclown.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MAC无法开机，开机显示LOGO，无法进入系统</title>
+    <link href="https://loneyclown.github.io/2020/02/14/randomNotes/2020-02-14-MAC%E6%97%A0%E6%B3%95%E5%BC%80%E6%9C%BA/"/>
+    <id>https://loneyclown.github.io/2020/02/14/randomNotes/2020-02-14-MAC%E6%97%A0%E6%B3%95%E5%BC%80%E6%9C%BA/</id>
+    <published>2020-02-13T16:00:00.000Z</published>
+    <updated>2020-02-14T13:58:09.776Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题记"><a href="#题记" class="headerlink" title="题记"></a>题记</h2><p>今天作了个死，想给MAC装个双系统。结果直接翻车，安装win10的过程中失败了，然后重启直接整个电脑都垮掉。google了各种解决方法，终于是正常开机。</p><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>按照我的操作，然后根据我google的一些内容，初步判断问题的原因是mac硬盘记忆存储的问题。</p><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>既然是硬盘记忆存储的问题，那么解决方案就是清空硬盘缓存。<br>方法如下：</p><h4 id="进入macOS恢复模式"><a href="#进入macOS恢复模式" class="headerlink" title="进入macOS恢复模式"></a>进入macOS恢复模式</h4><ol><li>开启 Mac，然后立即按住 Command (⌘) 和 R 键。</li><li>当您看到 Apple 标志、旋转的地球或<a href="https://support.apple.com/zh-cn/HT204156" target="_blank" rel="noopener">其他启动屏幕</a>时，请松开这两个按键。</li><li>看到“实用工具”窗口时，启动即完成：<br><img src="https://support.apple.com/library/content/dam/edam/applecare/images/zh_CN/macos/highsierra/macos-high-sierra-recovery-mode-reinstall.jpg" alt><br><em>参考链接：<a href="https://support.apple.com/zh-cn/HT201314" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201314</a></em></li></ol><h4 id="清楚硬盘缓存"><a href="#清楚硬盘缓存" class="headerlink" title="清楚硬盘缓存"></a>清楚硬盘缓存</h4><p>在“实用工具”界面，左上角找到终端工具，在终端命令行中按如下顺序执行命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 进入缓存目录</span></span><br><span class="line">cd /Volumes/[你的硬盘名称]/var/db/caches/opendirectory/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 清楚缓存（将缓存文件重命名）</span></span><br><span class="line">mv ./mbr_cache ./mar_cache-old</span><br></pre></td></tr></table></figure><p>然后，退出终端，退出实用工具。此时会弹出一个对话框，问是重新启动还是选择启动盘什么的。选择“选择启动盘”，然后选择安装了macOS的启动盘，重启即可。</p><hr><p>附录1：参考链接 <a href="https://www.jianshu.com/p/1bb053414f74" target="_blank" rel="noopener">https://www.jianshu.com/p/1bb053414f74</a><br>附录2：Mac 的启动组合键 <a href="https://support.apple.com/zh-cn/HT201255" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT201255</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;题记&quot;&gt;&lt;a href=&quot;#题记&quot; class=&quot;headerlink&quot; title=&quot;题记&quot;&gt;&lt;/a&gt;题记&lt;/h2&gt;&lt;p&gt;今天作了个死，想给MAC装个双系统。结果直接翻车，安装win10的过程中失败了，然后重启直接整个电脑都垮掉。google了各种解决方法，终于
+      
+    
+    </summary>
+    
+    
+      <category term="随拾" scheme="https://loneyclown.github.io/categories/%E9%9A%8F%E6%8B%BE/"/>
+    
+    
+      <category term="MAC" scheme="https://loneyclown.github.io/tags/MAC/"/>
+    
+  </entry>
   
   <entry>
     <title>GCP最新白嫖教程</title>
@@ -538,34 +564,6 @@
     
       <category term="随笔" scheme="https://loneyclown.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>元素内容增加，滚动条跟着滚动||获得元素的标签名</title>
-    <link href="https://loneyclown.github.io/2018/08/14/studyNotes/2018-08-14-notes/"/>
-    <id>https://loneyclown.github.io/2018/08/14/studyNotes/2018-08-14-notes/</id>
-    <published>2018-08-13T16:00:00.000Z</published>
-    <updated>2020-01-16T06:04:16.972Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="元素内容增加，滚动条跟着滚动"><a href="#元素内容增加，滚动条跟着滚动" class="headerlink" title="元素内容增加，滚动条跟着滚动"></a>元素内容增加，滚动条跟着滚动</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'.box'</span>).animate(&#123;<span class="attr">scrollTop</span>: $(<span class="string">'.box'</span>)[<span class="number">0</span>].scrollHeight&#125;, <span class="number">500</span>);</span><br><span class="line"><span class="comment">// box 为需要滚动的容器</span></span><br></pre></td></tr></table></figure><h3 id="获得元素的标签名"><a href="#获得元素的标签名" class="headerlink" title="获得元素的标签名"></a>获得元素的标签名</h3><p><code>document.getElementById(&quot;demo&quot;).tagName;</code></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// jquery获取点击元素的标签名</span></span><br><span class="line">$(<span class="string">'#demo'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log($(<span class="keyword">this</span>)[<span class="number">0</span>].tagName.toLowerCase());</span><br><span class="line">  <span class="comment">// 在 HTML 中，tagName 属性的返回值始终是大写的，所以要转化为小写</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;元素内容增加，滚动条跟着滚动&quot;&gt;&lt;a href=&quot;#元素内容增加，滚动条跟着滚动&quot; class=&quot;headerlink&quot; title=&quot;元素内容增加，滚动条跟着滚动&quot;&gt;&lt;/a&gt;元素内容增加，滚动条跟着滚动&lt;/h3&gt;&lt;figure class=&quot;highlight 
-      
-    
-    </summary>
-    
-    
-      <category term="学习笔记" scheme="https://loneyclown.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="滚动条" scheme="https://loneyclown.github.io/tags/%E6%BB%9A%E5%8A%A8%E6%9D%A1/"/>
-    
-      <category term="标签名" scheme="https://loneyclown.github.io/tags/%E6%A0%87%E7%AD%BE%E5%90%8D/"/>
     
   </entry>
   
