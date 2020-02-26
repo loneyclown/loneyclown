@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://loneyclown.github.io/"/>
-  <updated>2020-02-14T13:58:09.776Z</updated>
+  <updated>2020-02-26T04:19:14.335Z</updated>
   <id>https://loneyclown.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机内码转区内码</title>
+    <link href="https://loneyclown.github.io/2020/02/26/randomNotes/2020-02-26-%E6%9C%BA%E5%86%85%E7%A0%81%E8%BD%AC%E5%8C%BA%E5%86%85%E7%A0%81/"/>
+    <id>https://loneyclown.github.io/2020/02/26/randomNotes/2020-02-26-%E6%9C%BA%E5%86%85%E7%A0%81%E8%BD%AC%E5%8C%BA%E5%86%85%E7%A0%81/</id>
+    <published>2020-02-25T16:00:00.000Z</published>
+    <updated>2020-02-26T04:19:14.335Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 十六进制字符串转十六进制数(<span class="params">v</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> v === <span class="string">"string"</span>) &#123;</span><br><span class="line">    v = <span class="built_in">parseInt</span>(<span class="string">"0x"</span> + v);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> v;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> 机内码转汉字(<span class="params">机内码</span>) </span>&#123;</span><br><span class="line">  机内码 = 十六进制字符串转十六进制数(机内码);</span><br><span class="line">  <span class="keyword">let</span> 国标码 = (机内码 - <span class="number">0x8080</span>);</span><br><span class="line">  <span class="keyword">let</span> 区位码<span class="number">0</span>x = (国标码 - <span class="number">0x2020</span>).toString(<span class="number">16</span>);</span><br><span class="line">  <span class="keyword">let</span> 区位码拆s = 区位码<span class="number">0</span>x.split(<span class="string">""</span>).map(<span class="function"><span class="params">x</span> =&gt;</span> x);</span><br><span class="line">  <span class="keyword">let</span> 区位码s = [], 区 = <span class="string">""</span>;</span><br><span class="line">  区位码拆s.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">    区 = 区+item;</span><br><span class="line">    <span class="keyword">if</span>((index+<span class="number">1</span>)%<span class="number">2</span> === <span class="number">0</span>) &#123;</span><br><span class="line">      区位码s.push(区);</span><br><span class="line">      区 = <span class="string">""</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  区位码s = 区位码s.map(<span class="function"><span class="params">x</span> =&gt;</span> 十六进制字符串转十六进制数(x));</span><br><span class="line">  <span class="keyword">return</span> 区位码s.join(<span class="string">""</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(机内码转汉字(<span class="string">"d3b2"</span>));</span><br><span class="line"><span class="comment">// =&gt; 5118</span></span><br><span class="line"><span class="built_in">console</span>.log(机内码转汉字(<span class="string">"bacb"</span>));</span><br><span class="line"><span class="comment">// =&gt; 2643</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;l
+      
+    
+    </summary>
+    
+    
+      <category term="随拾" scheme="https://loneyclown.github.io/categories/%E9%9A%8F%E6%8B%BE/"/>
+    
+    
+      <category term="字符编码" scheme="https://loneyclown.github.io/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>MAC无法开机，开机显示LOGO，无法进入系统</title>
@@ -201,9 +227,9 @@
       <category term="学习笔记" scheme="https://loneyclown.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="js" scheme="https://loneyclown.github.io/tags/js/"/>
-    
       <category term="json" scheme="https://loneyclown.github.io/tags/json/"/>
+    
+      <category term="js" scheme="https://loneyclown.github.io/tags/js/"/>
     
       <category term="array" scheme="https://loneyclown.github.io/tags/array/"/>
     
@@ -365,9 +391,9 @@
       <category term="学习笔记" scheme="https://loneyclown.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="css" scheme="https://loneyclown.github.io/tags/css/"/>
-    
       <category term="less" scheme="https://loneyclown.github.io/tags/less/"/>
+    
+      <category term="css" scheme="https://loneyclown.github.io/tags/css/"/>
     
       <category term="node" scheme="https://loneyclown.github.io/tags/node/"/>
     
@@ -533,30 +559,6 @@
       
       
         &lt;h1 id=&quot;《乌诏葬歌》&quot;&gt;&lt;a href=&quot;#《乌诏葬歌》&quot; class=&quot;headerlink&quot; title=&quot;《乌诏葬歌》&quot;&gt;&lt;/a&gt;《乌诏葬歌》&lt;/h1&gt;&lt;p&gt;&lt;em&gt;上古信仰阎罗的部族流传的古老葬歌，用于葬礼上送别亲人、安抚亡魂。旋律简单、容易记忆，有一定民族的特色
-      
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="https://loneyclown.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>美文美句收录集（二）</title>
-    <link href="https://loneyclown.github.io/2018/08/17/essays/2018-08-17-essays/"/>
-    <id>https://loneyclown.github.io/2018/08/17/essays/2018-08-17-essays/</id>
-    <published>2018-08-16T16:00:00.000Z</published>
-    <updated>2019-10-12T01:43:11.132Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="其一"><a href="#其一" class="headerlink" title="其一"></a>其一</h1><p>小女子不才，承蒙公子厚爱了多时。公子之心，我皆明了。公子之苦，我亦尽尝。奈何世无常，终究与公子情深缘浅，不得长相厮守一生白头。望此后遇得良人，公子且将付我心，付与他人可。祝公子平安喜乐，一生顺遂。你我，自是不必再相见了。</p><h3 id="附"><a href="#附" class="headerlink" title="附"></a>附</h3><p>小生不才，未得姑娘青睐，扰姑娘良久，姑娘勿怪，自此所有爱慕之意止于唇齿，匿与年华，姑娘往南走，小生往北瞧，不再打扰姑娘，今生就此别过，望姑娘日后善其身，遇良人予君欢喜城，暖色浮余生。</p><h1 id="其二"><a href="#其二" class="headerlink" title="其二"></a>其二</h1><p>是小女冒犯了，还望公子见谅。应当那芳菲四月是个差错，那柳絮纷飞是个梦厄，那杯酒平生是个蹉跎，公子是我的梦里岁月，梦外便没了因果。世人皆无过，是我不才，不能得公子欢喜罢了。愿公子同她夜夜流光相皎洁才是，此去一别，珍重，便不必再见了。</p><h1 id="其三"><a href="#其三" class="headerlink" title="其三"></a>其三</h1><p>小女子不才，承蒙公子错爱，没能与公子谈笑风生，望公子另觅良人，此经一别，自是永不相见，愿公子万水千程，一世平安。若有来生，请许我一世温柔，红妆十里，凤冠霞帔，为你所爱之人！</p><h1 id="其四"><a href="#其四" class="headerlink" title="其四"></a>其四</h1><p>小女子不才，承蒙公子错爱，愿公子觅得意中人，经此一别，自是永不相见，愿公子万水千程，一世平安。</p><h1 id="其五"><a href="#其五" class="headerlink" title="其五"></a>其五</h1><p>奴家福薄，承蒙公子抬爱。望公子止步，公子莫哀。奈何终究世事无常，情深缘浅；流水蹉跎，落花梦厄。公子阳关道，奴家且过桥，勿念今朝情谊懵懂，至此各奔西东。请公子今日付我心，付伊人，与伊平安乐，一生喜顺遂。</p><h1 id="其五-1"><a href="#其五-1" class="headerlink" title="其五"></a>其五</h1><p>小女子不才，不知公子早已心系别家姑娘。此经一别，自是不必相见了。 公子，以身相许于我，倒也不算委屈。 小女子无以为谢，唯有下辈子以身相许。 君王的手小女子牵了，就没想过要放开。 公子为我选发簪，我为公子绾墨发，朝朝暮暮相依偎，梳尽青丝鬓霜白。 公子手脚不净，便是身无分文。</p><h1 id="其六"><a href="#其六" class="headerlink" title="其六"></a>其六</h1><p>小女子不才，不知公子早已心属别家女子，此今一别，值此不必再相见了，那最后祝公子，倾城万水，一路安好！</p><h1 id="其七"><a href="#其七" class="headerlink" title="其七"></a>其七</h1><p>小女不才，未得先生垂怜，饶先生良多，先生勿怪。自此所有爱慕之意止于心底，逝与年华，掩于彼此。先生南往，小女南望，不再想见不予打扰，今生咫尺，盼先生早遇红袖，伴于先生，于先生添香研磨，共复余生。</p><h1 id="附·公子·其一"><a href="#附·公子·其一" class="headerlink" title="附·公子·其一"></a>附·公子·其一</h1><p>小生不才，与姑娘萍水相逢，却妄自恋姑娘许久。世间纵有弱水三千，偏我眼中只有姑娘一人。<br>小生不才，奈何姑娘已长发及腰，吾却功名未就。<br>小生自问，心中唯姑娘一人耳，若能与姑娘携手一生，自当视姑娘如珍宝。<br>小生不才，未能与姑娘谈笑风生，殊不知姑娘早以心系他人。<br>未能与姑娘珍重道别，所有爱恨痴缠，尽在黄粱一梦中。<br>未能共姑娘策马一生，所有思念成疾，尽在一身药骨之中。</p><h1 id="附·公子·其二"><a href="#附·公子·其二" class="headerlink" title="附·公子·其二"></a>附·公子·其二</h1><p>吾生良人终可觅，难得我心付她心。情深缘浅皆是非，深山清酒难自醉。</p><h1 id="附·公子·其三"><a href="#附·公子·其三" class="headerlink" title="附·公子·其三"></a>附·公子·其三</h1><p>小生不才，未能陪姑娘鲜衣怒马走天涯，只愿来生三生石前，奈何桥旁，再与姑娘共续前缘。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;其一&quot;&gt;&lt;a href=&quot;#其一&quot; class=&quot;headerlink&quot; title=&quot;其一&quot;&gt;&lt;/a&gt;其一&lt;/h1&gt;&lt;p&gt;小女子不才，承蒙公子厚爱了多时。公子之心，我皆明了。公子之苦，我亦尽尝。奈何世无常，终究与公子情深缘浅，不得长相厮守一生白头。望此后遇得良人
       
     
     </summary>
